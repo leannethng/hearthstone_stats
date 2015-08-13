@@ -1,4 +1,404 @@
- [
+{
+    "history": [
+        {
+            "id": 8945012,
+            "mode": "casual",
+            "hero": "Rogue",
+            "opponent": "Shaman",
+            "coin": false,
+            "result": "win",
+            "duration": 688,
+            "added": "2015-08-13T00:49:57.370Z",
+            "card_history": [
+                {
+                    "player": "me",
+                    "turn": 2,
+                    "card": {
+                        "id": "FP1_002",
+                        "name": "Haunted Creeper",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 2,
+                    "card": {
+                        "id": "CS2_049",
+                        "name": "Totemic Call",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 3,
+                    "card": {
+                        "id": "CS2_083b",
+                        "name": "Dagger Mastery",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 3,
+                    "card": {
+                        "id": "CS2_049",
+                        "name": "Totemic Call",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 4,
+                    "card": {
+                        "id": "CS2_182",
+                        "name": "Chillwind Yeti",
+                        "mana": 4
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 4,
+                    "card": {
+                        "id": "CS2_072",
+                        "name": "Backstab",
+                        "mana": 0
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 4,
+                    "card": {
+                        "id": "GAME_005",
+                        "name": "The Coin",
+                        "mana": null
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 4,
+                    "card": {
+                        "id": "EX1_246",
+                        "name": "Hex",
+                        "mana": 3
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 4,
+                    "card": {
+                        "id": "EX1_066",
+                        "name": "Acidic Swamp Ooze",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 5,
+                    "card": {
+                        "id": "FP1_002",
+                        "name": "Haunted Creeper",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 5,
+                    "card": {
+                        "id": "CS2_142",
+                        "name": "Kobold Geomancer",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 5,
+                    "card": {
+                        "id": "CS2_049",
+                        "name": "Totemic Call",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 5,
+                    "card": {
+                        "id": "EX1_565",
+                        "name": "Flametongue Totem",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 5,
+                    "card": {
+                        "id": "CS2_045",
+                        "name": "Rockbiter Weapon",
+                        "mana": 1
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 6,
+                    "card": {
+                        "id": "CS2_083b",
+                        "name": "Dagger Mastery",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 6,
+                    "card": {
+                        "id": "CS2_147",
+                        "name": "Gnomish Inventor",
+                        "mana": 4
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 6,
+                    "card": {
+                        "id": "CS2_049",
+                        "name": "Totemic Call",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 6,
+                    "card": {
+                        "id": "EX1_019",
+                        "name": "Shattered Sun Cleric",
+                        "mana": 3
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 7,
+                    "card": {
+                        "id": "CS2_076",
+                        "name": "Assassinate",
+                        "mana": 5
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 7,
+                    "card": {
+                        "id": "CS2_083b",
+                        "name": "Dagger Mastery",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 7,
+                    "card": {
+                        "id": "CS2_042",
+                        "name": "Fire Elemental",
+                        "mana": 6
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 7,
+                    "card": {
+                        "id": "EX1_251",
+                        "name": "Forked Lightning",
+                        "mana": 1
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 8,
+                    "card": {
+                        "id": "CS2_074",
+                        "name": "Deadly Poison",
+                        "mana": 1
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 8,
+                    "card": {
+                        "id": "CS2_074",
+                        "name": "Deadly Poison",
+                        "mana": 1
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 8,
+                    "card": {
+                        "id": "CS2_200",
+                        "name": "Boulderfist Ogre",
+                        "mana": 6
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 8,
+                    "card": {
+                        "id": "EX1_246",
+                        "name": "Hex",
+                        "mana": 3
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 8,
+                    "card": {
+                        "id": "NEW1_037",
+                        "name": "Master Swordsmith",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 9,
+                    "card": {
+                        "id": "CS2_200",
+                        "name": "Boulderfist Ogre",
+                        "mana": 6
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 9,
+                    "card": {
+                        "id": "EX1_066",
+                        "name": "Acidic Swamp Ooze",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 9,
+                    "card": {
+                        "id": "FP1_030",
+                        "name": "Loatheb",
+                        "mana": 5
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 9,
+                    "card": {
+                        "id": "EX1_019",
+                        "name": "Shattered Sun Cleric",
+                        "mana": 3
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 10,
+                    "card": {
+                        "id": "FP1_030",
+                        "name": "Loatheb",
+                        "mana": 5
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 10,
+                    "card": {
+                        "id": "CS2_147",
+                        "name": "Gnomish Inventor",
+                        "mana": 4
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 10,
+                    "card": {
+                        "id": "FP1_012",
+                        "name": "Sludge Belcher",
+                        "mana": 5
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 10,
+                    "card": {
+                        "id": "CS2_049",
+                        "name": "Totemic Call",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 11,
+                    "card": {
+                        "id": "CS2_179",
+                        "name": "Sen'jin Shieldmasta",
+                        "mana": 4
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 11,
+                    "card": {
+                        "id": "CS2_083b",
+                        "name": "Dagger Mastery",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 11,
+                    "card": {
+                        "id": "CS2_182",
+                        "name": "Chillwind Yeti",
+                        "mana": 4
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 11,
+                    "card": {
+                        "id": "EX1_066",
+                        "name": "Acidic Swamp Ooze",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 11,
+                    "card": {
+                        "id": "CS2_049",
+                        "name": "Totemic Call",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "me",
+                    "turn": 12,
+                    "card": {
+                        "id": "CS2_083b",
+                        "name": "Dagger Mastery",
+                        "mana": 2
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 12,
+                    "card": {
+                        "id": "EX1_575",
+                        "name": "Mana Tide Totem",
+                        "mana": 3
+                    }
+                },
+                {
+                    "player": "opponent",
+                    "turn": 12,
+                    "card": {
+                        "id": "CS2_222",
+                        "name": "Stormwind Champion",
+                        "mana": 7
+                    }
+                }
+            ]
+        },
         {
             "id": 8913146,
             "mode": "casual",
@@ -3932,459 +4332,13 @@
                     }
                 }
             ]
-        },
-        {
-            "id": 8780340,
-            "mode": "arena",
-            "hero": "Paladin",
-            "opponent": "Warlock",
-            "coin": true,
-            "result": "loss",
-            "arena_id": 251329,
-            "duration": 813,
-            "added": "2015-08-08T17:12:53.841Z",
-            "card_history": [
-                {
-                    "player": "me",
-                    "turn": 1,
-                    "card": {
-                        "id": "GAME_005",
-                        "name": "The Coin",
-                        "mana": null
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 1,
-                    "card": {
-                        "id": "FP1_002",
-                        "name": "Haunted Creeper",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 2,
-                    "card": {
-                        "id": "EX1_066",
-                        "name": "Acidic Swamp Ooze",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 2,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 3,
-                    "card": {
-                        "id": "GVG_081",
-                        "name": "Gilblin Stalker",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 3,
-                    "card": {
-                        "id": "CS2_141",
-                        "name": "Ironforge Rifleman",
-                        "mana": 3
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 4,
-                    "card": {
-                        "id": "CS2_059",
-                        "name": "Blood Imp",
-                        "mana": 1
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 4,
-                    "card": {
-                        "id": "EX1_055",
-                        "name": "Mana Addict",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 4,
-                    "card": {
-                        "id": "EX1_010",
-                        "name": "Worgen Infiltrator",
-                        "mana": 1
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 4,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 4,
-                    "card": {
-                        "id": "GVG_013",
-                        "name": "Cogmaster",
-                        "mana": 1
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 5,
-                    "card": {
-                        "id": "FP1_022",
-                        "name": "Voidcaller",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 5,
-                    "card": {
-                        "id": "CS2_092",
-                        "name": "Blessing of Kings",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 6,
-                    "card": {
-                        "id": "BRM_026",
-                        "name": "Hungry Dragon",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 6,
-                    "card": {
-                        "id": "CS2_056",
-                        "name": "Life Tap",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 6,
-                    "card": {
-                        "id": "CS2_097",
-                        "name": "Truesilver Champion",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 6,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 7,
-                    "card": {
-                        "id": "CS2_151",
-                        "name": "Silver Hand Knight",
-                        "mana": 5
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 7,
-                    "card": {
-                        "id": "CS2_056",
-                        "name": "Life Tap",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 7,
-                    "card": {
-                        "id": "EX1_284",
-                        "name": "Azure Drake",
-                        "mana": 5
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 7,
-                    "card": {
-                        "id": "GVG_085",
-                        "name": "Annoy-o-Tron",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 8,
-                    "card": {
-                        "id": "GVG_103",
-                        "name": "Micro Machine",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 8,
-                    "card": {
-                        "id": "BRM_024",
-                        "name": "Drakonid Crusher",
-                        "mana": 6
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 8,
-                    "card": {
-                        "id": "CS2_117",
-                        "name": "Earthen Ring Farseer",
-                        "mana": 3
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 8,
-                    "card": {
-                        "id": "EX1_362",
-                        "name": "Argent Protector",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 8,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 9,
-                    "card": {
-                        "id": "GVG_090",
-                        "name": "Madder Bomber",
-                        "mana": 5
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 9,
-                    "card": {
-                        "id": "GVG_067",
-                        "name": "Stonesplinter Trogg",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 9,
-                    "card": {
-                        "id": "CS2_097",
-                        "name": "Truesilver Champion",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 9,
-                    "card": {
-                        "id": "EX1_130",
-                        "name": "Noble Sacrifice",
-                        "mana": 1
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 9,
-                    "card": {
-                        "id": "EX1_057",
-                        "name": "Ancient Brewmaster",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 10,
-                    "card": {
-                        "id": "CS2_056",
-                        "name": "Life Tap",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 10,
-                    "card": {
-                        "id": "EX1_043",
-                        "name": "Twilight Drake",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 11,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 11,
-                    "card": {
-                        "id": "EX1_046",
-                        "name": "Dark Iron Dwarf",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 11,
-                    "card": {
-                        "id": "CS2_092",
-                        "name": "Blessing of Kings",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 11,
-                    "card": {
-                        "id": "EX1_046",
-                        "name": "Dark Iron Dwarf",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 11,
-                    "card": {
-                        "id": "CS2_062",
-                        "name": "Hellfire",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 11,
-                    "card": {
-                        "id": "CS2_056",
-                        "name": "Life Tap",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 12,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 12,
-                    "card": {
-                        "id": "GVG_006",
-                        "name": "Mechwarper",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 12,
-                    "card": {
-                        "id": "EX1_562",
-                        "name": "Onyxia",
-                        "mana": 9
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 13,
-                    "card": {
-                        "id": "GVG_096",
-                        "name": "Piloted Shredder",
-                        "mana": 4
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 13,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 13,
-                    "card": {
-                        "id": "EX1_302",
-                        "name": "Mortal Coil",
-                        "mana": 1
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 13,
-                    "card": {
-                        "id": "GVG_015",
-                        "name": "Darkbomb",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "opponent",
-                    "turn": 13,
-                    "card": {
-                        "id": "BRM_024",
-                        "name": "Drakonid Crusher",
-                        "mana": 6
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 14,
-                    "card": {
-                        "id": "CS2_101",
-                        "name": "Reinforce",
-                        "mana": 2
-                    }
-                },
-                {
-                    "player": "me",
-                    "turn": 14,
-                    "card": {
-                        "id": "FP1_020",
-                        "name": "Avenge",
-                        "mana": 1
-                    }
-                }
-            ]
         }
-    ]
+    ],
+    "meta": {
+        "current_page": 1,
+        "next_page": 2,
+        "prev_page": null,
+        "total_pages": 3,
+        "total_items": 34
+    }
+}
