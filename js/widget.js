@@ -8,26 +8,9 @@ $(document).ready(function () {
       } else {
         statusHTML +='<li class="lost">';
       }
-      statusHTML += hero.hero + '</li>';
+      statusHTML += hero.hero + ' vs ' + hero.opponent + '</li>';
     });
     statusHTML += '</ul>';
     $('#games').html(statusHTML);
   }); // end getJSON
-
-  //   //rooms
-  //   $.getJSON('../data/rooms.json', function (data) {
-  //   var roomHTML = '<ul class="rooms">';
-  //   $.each(data,function (index, room) {
-  //     if (room.available === true) {
-  //       roomHTML +='<li class="empty">';
-  //     } else {
-  //       roomHTML +='<li class="full">';
-  //     }
-  //     roomHTML += room.room + '</li>';
-  //   });
-  //   roomHTML += '</ul>';
-  //   $('#roomList').html(roomHTML);
-  //
-  // }); // end getJSON
-
 }); // end ready
