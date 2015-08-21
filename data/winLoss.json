@@ -1,10 +1,6 @@
 {
     "stats": {
-        "overall": {
-            "wins": 41,
-            "losses": 29,
-            "total": 70
-        },
+      
         "as_class": {
             "Warrior": {
                 "wins": 0,
