@@ -24,7 +24,7 @@ $(document).ready(function () {
         } else {
           statusHTML +='<li class="lost">';
         }
-        statusHTML += data.total +" "+ data.as_class + '</li>';
+        statusHTML += data.total +" "+ Object.getOwnPropertyNames(data) + '</li>';
       });
       statusHTML += '</ul>';
       $('#winloss').html(statusHTML);
