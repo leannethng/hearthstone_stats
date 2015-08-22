@@ -15,54 +15,47 @@ $(document).ready(function() {
   }); // end getJSON
 
 
-  // $.getJSON('../data/winLoss.json', function(response) {
-  //   var statusHTML = '<ul class="bulleted">';
-  //   $.each(response.stats.as_class, function(index, data) {
-  //     // console.log(typeof data);
-  //     if (data.wins > 0) {
-  //       statusHTML += '<li class="won">';
-  //     } else {
-  //       statusHTML += '<li class="lost">';
-  //     }
-  //
-  //
-  //     statusHTML += data.total;
-  //
-  //     $.each(response.stats.as_class, function(key, value) {
-  //       console.log(value);
-  //       statusHTML += " " + key + '</li>';
-  //     });
-  //
-  //   });
-  //   statusHTML += '</ul>';
-  //   $('#winloss').html(statusHTML);
-  // }); // end getJSON
 
-  // $.getJSON('../data/winLoss.json', function(response) {
-  //   var statusHTML = '<tbody>';
-  //   $.each(response.stats.as_class, function(key, value) {
-  //     statusHTML += "<tr class=" + key + " " +"id=" + key +">";
-  //
-  //
-  //     statusHTML += "<th scope='row'>"+ key +"</th>";
-  //       statusHTML += "<td class='loss bar' style='height: 24px;'>";
-  //       statusHTML += "</td>";
-  //       statusHTML += "<td class='win bar' style='height: 24px;'>";
-  //       statusHTML += "</td>";
-  //     statusHTML += "</tr>";
-  //
-  //     // $.each(response.stats.as_class, function(key, value) {
-  //     //   console.log(value);
-  //     //
-  //     // });
-  //
-  //   });
-  //   statusHTML += '</tbody>';
-  //   $('#table').html(statusHTML);
-  //   $("#table").appendTo($("#graph"))
-  // }); // end getJSON
+  $.getJSON('../data/winLoss.json', function(response) {
+      var statusHTML = "<div id='graph'>";
+
+    $.each(response.stats.as_class, function(key, value) {
+        var losses = (value.losses / value.total) * 100;
+
+          if (isNaN(losses)){
+              losses = losses || 0;
+          }
+
+        var wins = (value.wins / value.total) * 100;
+        if (isNaN(wins)){
+            wins = wins || 0;
+        }
+
+      statusHTML += "<div>";
+      statusHTML += '<div class="loss bar" style="height:'+ losses +'%;">';
+
+      if (losses === 0){
+        statusHTML += "<p></p>"
+      } else{
+          statusHTML += '<p>' + value.losses +'</p>';
+      }
+      statusHTML += "</div>";
+      statusHTML += '<div class="win bar" style="height:'+ wins +'%;">';
+
+      if (wins === 0){
+        statusHTML += "<p></p>"
+      } else{
+          statusHTML += '<p>' + value.wins +'</p>';
+      }
+      statusHTML += "</div>";
+      statusHTML += '<p class="row">' + key +'</p>';
+        statusHTML += "</div>";
 
 
+    });
+    statusHTML += "</div>";
+    $('#wrapper').html(statusHTML);
 
+  }); // end getJSON
 
 }); // end ready
