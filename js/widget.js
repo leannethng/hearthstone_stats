@@ -16,29 +16,6 @@ $(document).ready(function() {
 
 
   // $.getJSON('../data/winLoss.json', function(response) {
-  //   var statusHTML = '<ul class="bulleted">';
-  //   $.each(response.stats.as_class, function(index, data) {
-  //     // console.log(typeof data);
-  //     if (data.wins > 0) {
-  //       statusHTML += '<li class="won">';
-  //     } else {
-  //       statusHTML += '<li class="lost">';
-  //     }
-  //
-  //
-  //     statusHTML += data.total;
-  //
-  //     $.each(response.stats.as_class, function(key, value) {
-  //       console.log(value);
-  //       statusHTML += " " + key + '</li>';
-  //     });
-  //
-  //   });
-  //   statusHTML += '</ul>';
-  //   $('#winloss').html(statusHTML);
-  // }); // end getJSON
-
-  // $.getJSON('../data/winLoss.json', function(response) {
   //   var statusHTML = '<tbody>';
   //   $.each(response.stats.as_class, function(key, value) {
   //     statusHTML += "<tr class=" + key + " " +"id=" + key +">";
@@ -62,7 +39,36 @@ $(document).ready(function() {
   //   $("#table").appendTo($("#graph"))
   // }); // end getJSON
 
+  $.getJSON('../data/winLoss.json', function(response) {
+      statusHTML = "<div id='graph'>";
+    $.each(response.stats.as_class, function(key, value) {
+      statusHTML += "<div>";
+      statusHTML += '<div class="loss bar" style="height: 40%;">';
+      statusHTML += '<p>2</p>';
+      statusHTML += "</div>";
+      statusHTML += '<div class="win bar" style="height: 40%;">';
+      statusHTML += '<p>2</p>';
+      statusHTML += "</div>";
+      statusHTML += '<p class="row">' + key + '</p>';
+        statusHTML += "</div>";
+        console.log(statusHTML);
 
+
+      // $.each(response.stats.as_class, function(key, value) {
+      //   console.log(value);
+      //
+      // });
+
+    });
+    statusHTML += "</div>";
+    $('#wrapper').html(statusHTML);
+
+
+      // $.each(response.stats.as_class, function(key, value) {
+      //   statusHTML = key;
+      //   $('.row').html(statusHTML);
+    // $("#table").appendTo($("#graph"))
+  }); // end getJSON
 
 
 }); // end ready
