@@ -8,53 +8,36 @@
   padding: 0;
   background: transparent;
   font-size: 11px; }
-
   #graph div {
     width: 70%;
     position: relative;
     padding: 0 2%;
-    z-index: 2;
-
-  }
-
-
-
-#graph caption {
-  caption-side: top;
-  width: 600px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  top: -40px;
-  position: relative;
-  z-index: 10;
-  font-weight: bold; }
-
-#graph .row {
-  position: absolute;
-  bottom: -50px;
-
-  color: #333; }
-
-
-
-#graph .bar p {
-  margin: 5px 0 0;
-  padding: 0;
-  opacity: 0.4;
-  font-size: 0.85em;
-  color: #383838; }
-
-#graph .loss {
-  position: absolute;
-  background-color: #7fdbff;
-  border-color: transparent; }
-
-#graph .win {
-  position: absolute;
-  background-color: #39cccc;
-  border-color: transparent;
-  bottom:0;
- }
+    z-index: 2; }
+  #graph .row {
+    position: absolute;
+    bottom: -50px;
+    color: #333; }
+  #graph .loss {
+    position: absolute;
+    background-color: #7fdbff;
+    border-color: transparent; }
+    #graph .loss:hover {
+      opacity: .5;
+      color: white; }
+  #graph .win {
+    position: absolute;
+    background-color: #39cccc;
+    border-color: transparent;
+    bottom: 0; }
+    #graph .win:hover {
+      opacity: .5;
+      color: white; }
+  #graph .bar p {
+    margin: 5px 0 0;
+    padding: 0;
+    opacity: 0.4;
+    font-size: 0.85em;
+    color: #333; }
 
 #ticks {
   position: relative;
@@ -65,21 +48,16 @@
   z-index: 1;
   margin: 0 auto -300px;
   font-size: 10px;
-  font-family: "fira-sans-2", Verdana, sans-serif; }
-
-#ticks .tick {
-  position: relative;
-  border-bottom: 1px dotted #c4c4c4;
-   }
-
-#ticks .tick:first-child{
-  border-top: 1px dotted #c4c4c4;
-}
-
-#ticks .tick p {
-  position: absolute;
-  left: -5em;
-  top: -0.8em;
-  margin: 0 0 0 0.5em; }
+  font-family: fira-sans-2, Verdana, sans-serif; }
+  #ticks .tick {
+    position: relative;
+    border-bottom: 1px dotted #c4c4c4; }
+    #ticks .tick:first-child {
+      border-top: 1px dotted #c4c4c4; }
+    #ticks .tick p {
+      position: absolute;
+      left: -5em;
+      top: -0.8em;
+      margin: 0 0 0 0.5em; }
 
 /*# sourceMappingURL=graph.css.map */

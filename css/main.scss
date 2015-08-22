@@ -1,0 +1,144 @@
+//colors
+$color_gallery_approx: #edeff0;
+$white: white;
+$black_10: rgba(0, 0, 0, .1);
+$color_dark_grey: #333;
+$color_manatee: #8d9aa5;
+$color_shuttle_gray_approx: #5a6772;
+$color_emerald_approx: #5fcf80;
+$color_carnation_approx: #ed5a5a;
+
+//@extend-elements
+
+%extend_1 {
+
+	box-sizing: border-box;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+%extend_2 {
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	border: 0;
+}
+%extend_3 {
+	font-size: 2.4em;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 8px;
+	color: $color_dark_grey;
+}
+
+
+.grid-container {
+	position: relative;
+	max-width: 1080px;
+}
+.chart {
+	@extend %extend_1;
+	padding: 10% 0;
+}
+.history {
+	@extend %extend_1;
+}
+.wrapper {
+	@extend %extend_1;
+}
+html {
+	@extend %extend_2;
+	line-height: 1;
+}
+body {
+	@extend %extend_2;
+	font-family: Varela Round, Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 62.5%;
+	padding: 50px 0 0;
+	background: $color_gallery_approx;
+}
+div {
+	@extend %extend_2;
+}
+h1 {
+	@extend %extend_2;
+	@extend %extend_3;
+}
+h2 {
+	@extend %extend_2;
+	@extend %extend_3;
+	font-size: 1.8em;
+}
+p {
+	@extend %extend_2;
+	font-size: 1.4em;
+	line-height: 1.4;
+	margin-bottom: 15px;
+	color: $color_manatee;
+}
+ul {
+	@extend %extend_2;
+	list-style: none;
+	li {
+		font-size: 1.6em;
+		position: relative;
+		margin: 15px 0 0;
+		color: $color_manatee;
+	}
+	&.bulleted {
+		margin-bottom: 20px;
+		li {
+			padding-left: 40px;
+			&:before {
+				font-size: .5em;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 25px;
+				padding: 3px 2px 2px;
+				text-align: center;
+				color: $white;
+
+				border-radius: 2px;
+			}
+		}
+		.won {
+			color: $color_shuttle_gray_approx;
+			&:before {
+				content: 'Won';
+				background-color: $color_emerald_approx;
+			}
+		}
+		.lost {
+			color: $color_manatee;
+			&:before {
+				content: 'Lost';
+				background-color: $color_carnation_approx;
+			}
+		}
+	}
+}
+li {
+	@extend %extend_2;
+}
+section {
+	@extend %extend_2;
+	display: block;
+}
+.centered {
+	margin: 0 auto;
+}
+.contained {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+	padding: 30px 15px;
+	border-radius: 5px;
+	background: $white;
+	box-shadow: 0 1px 0 0 $black_10;
+}
+.heading {
+	margin-bottom: 20px;
+}
