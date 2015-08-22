@@ -1,83 +1,137 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Hearthstone Games Played</title>
   <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/graph.css">
+  <link rel="stylesheet" href="css/graph.css">
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="js/widget.js"></script>
 </head>
+
 <body>
   <div class="grid-container centered">
     <div class="grid-100">
       <div class="contained">
-        <div class="grid-100">
-          <div class="heading">
-            <h1>Hearthstone Games</h1>
-          </div>
+        <div class="heading">
+          <h1>Hearthstone Games</h1>
         </div>
-        <section class="grid-70 main">
+        <!-- <section class="grid-70 main">
           <h2>Games Played</h2>
-          <div id="games">
+          <div id="games"></div>
+        </section> -->
+
+        <!-- <section class="grid-70 main">
+          <table id="graph">
+            <caption>Hearthstone Stats</caption>
+            <thead>
+              <tr>
+                <th></th>
+                <th class="win">Wins</th>
+                <th class="loss">Losses</th>
+              </tr>
+            </thead>
+            <div id="table">
+
+            </div>
+            </table> -->
+
+
+          <!-- <div id="ticks">
+            <div class="tick" style="height: 75px;">
+              <p>100%</p>
+            </div>
+            <div class="tick" style="height: 75px;">
+              <p>75%</p>
+            </div>
+            <div class="tick" style="height: 75px;">
+              <p>50%</p>
+            </div>
+            <div class="tick" style="height: 75px;">
+              <p>25%</p>
+            </div>
+          </div>
+
+        </section> -->
+
+        <section class="grid-30 main">
+          <table id="graph">
+            <caption>Hearthstone Stats</caption>
+            <thead>
+              <tr>
+                <th></th>
+                <th class="win">Wins</th>
+                <th class="loss">Losses</th>
+              </tr>
+            </thead>
+            <div id="table">
+            <tbody>
+              <tr class="Rogue" id="rogue">
+                <th scope="row">Rogue</th>
+                <td class="loss bar" style="height: 299px;">
+                  <p>2</p>
+                </td>
+                <td class="win bar" style="height: 111px;">
+                  <p>1</p>
+                </td>
+              </tr>
+
+              <tr class="Shamen" id="shamen">
+                <th scope="row">Shamen</th>
+                <td class="loss bar" style="height: 24px;">
+                  <p>4</p>
+                </td>
+                <td class="win bar" style="height: 206px;">
+                  <p>1</p>
+                </td>
+              </tr>
+
+              <tr class="Hunter" id="hunter">
+                <th scope="row">Hunter</th>
+                <td class="loss bar" style="height: 299px;">
+                  <p>2</p>
+                </td>
+                <td class="win bar" style="height: 111px;">
+                  <p>4</p>
+                </td>
+              </tr>
+
+              <tr class="Warrior" id="warrior">
+                <th scope="row">Warrior</th>
+                <td class="loss bar" style="height: 24px;">
+                  <p>4</p>
+                </td>
+                <td class="win bar" style="height: 206px;">
+                  <p>1</p>
+                </td>
+              </tr>
+
+            </tbody>
+          </div>
+          </table>
+
+          <div id="ticks">
+
+            <div class="tick" style="height: 75px;">
+              <p>100%</p>
+            </div>
+            <div class="tick" style="height: 75px;">
+              <p>75%</p>
+            </div>
+            <div class="tick" style="height: 75px;">
+              <p>50%</p>
+            </div>
+            <div class="tick" style="height: 75px;">
+              <p>25%</p>
+            </div>
           </div>
         </section>
-        
-        <section class="grid-70 main">
-          <h2>Games Played</h2>
-          <div id="winloss">
-          </div>
-        </section>
-<section class="grid-2 main">
-<table id="graph">
-<caption>Hearthstone Stats</caption>
-<thead>
-<tr>
-<th></th>
-<th class="win">Wins</th>
-<th class="loss">Losses</th> <!-- paid -->
-</tr>
-</thead>
-<tbody>
-<tr class="rogue" id="rogue">
-<th scope="row">Rogue</th>
-<td class="loss bar" style="height: 299px;"><p>2</p></td>
-<td class="win bar" style="height: 111px;"><p>1</p></td>
-</tr>
-
-<tr class="shamen" id="shamen">
-<th scope="row">Shamen</th>
-<td class="loss bar" style="height: 24px;"><p>4</p></td>
-<td class="win bar" style="height: 206px;"><p>1</p></td>
-</tr>
-
-<tr class="hunter" id="hunter">
-<th scope="row">Hunter</th>
-<td class="loss bar" style="height: 299px;"><p>2</p></td>
-<td class="win bar" style="height: 111px;"><p>4</p></td>
-</tr>
-
-<tr class="warrior" id="warrior">
-<th scope="row">Warrior</th>
-<td class="loss bar" style="height: 24px;"><p>4</p></td>
-<td class="win bar" style="height: 206px;"><p>1</p></td>
-</tr>
-
-</tbody>
-</table>
-
-<div id="ticks">
-
-<div class="tick" style="height: 75px;"><p>100%</p></div>
-<div class="tick" style="height: 75px;"><p>75%</p></div>
-<div class="tick" style="height: 75px;"><p>50%</p></div>
-<div class="tick" style="height: 75px;"><p>25%</p></div>
-</div>
-</section>
 
       </div>
     </div>
   </div>
 </body>
+
 </html>

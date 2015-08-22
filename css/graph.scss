@@ -1,20 +1,13 @@
 $color-loss: #7fdbff;
 $color-win: #39cccc;
 
-
-
-.grid-2 {
-margin: 10%;
-
-
-}
-
 #graph {
-  display: block; /* fixes layout wonkiness in FF1.5 */
+  display: block;
+  /* fixes layout wonkiness in FF1.5 */
   position: relative;
   width: 600px;
   height: 300px;
-  margin: 1.1em 0 0;
+  margin: 0 auto;
   padding: 0;
   background: transparent;
   font-size: 11px;
@@ -24,14 +17,16 @@ margin: 10%;
   caption-side: top;
   width: 600px;
   text-transform: uppercase;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
   top: -40px;
   position: relative;
   z-index: 10;
   font-weight: bold;
 }
 
-#graph tr, #graph th, #graph td {
+#graph tr,
+#graph th,
+#graph td {
   position: absolute;
   bottom: 0;
   width: 60px;
@@ -42,11 +37,11 @@ margin: 10%;
 }
 
 #graph td {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: desaturate(#85144b, 100);
-    opacity: .9;
+    opacity: 0.9;
     color: white;
   }
 }
@@ -57,18 +52,20 @@ margin: 10%;
   bottom: auto;
   margin: -2.5em 0 0 5em;
 }
+
 #graph thead th {
   width: 3.5em;
   height: auto;
   padding: 0.5em 1em;
 }
+
 #graph thead th.win {
   top: 0;
   left: 0;
   line-height: 2;
 }
-#graph thead th.loss {
 
+#graph thead th.loss {
   top: 3.75em;
   line-height: 2;
   left: 0;
@@ -77,20 +74,23 @@ margin: 10%;
 #graph tbody tr {
   height: 296px;
   padding-top: 2px;
-  border-right: 1px dotted #C4C4C4;
-  color: #AAA;
+  border-right: 1px dotted #c4c4c4;
+  color: #aaa;
 }
-#graph #rogue {
+
+#graph .Rogue {
   left: 0;
 }
-#graph #shamen {
 
+#graph .Shamen {
   left: 150px;
 }
-#graph #hunter {
+
+#graph .Hunter {
   left: 300px;
 }
-#graph #warrior{
+
+#graph .Warrior {
   left: 450px;
   border-right: none;
 }
@@ -98,37 +98,39 @@ margin: 10%;
 #graph tbody th {
   bottom: -1.75em;
   vertical-align: top;
-font-weight: normal;
-color: #333;
+  font-weight: normal;
+  color: #333;
 }
+
 #graph .bar {
   width: 60px;
   border: 1px solid;
   border-bottom: none;
   color: #000;
 }
+
 #graph .bar p {
   margin: 5px 0 0;
   padding: 0;
-  opacity: .4;
-  font-size: .85em;
+  opacity: 0.4;
+  font-size: 0.85em;
   color: #383838;
 }
 
 #graph .loss {
-  top:0;
+  top: 0;
+
   // left: 13px;
   background-color: $color-loss;
   border-color: transparent;
 }
 
 #graph .win {
+
   // left: 13px;
   background-color: $color-win;
   border-color: transparent;
 }
-
-
 
 #ticks {
   position: relative;
@@ -137,14 +139,14 @@ color: #333;
   width: 596px;
   height: 300px;
   z-index: 1;
-  margin-bottom: -300px;
+  margin: 0 auto -300px;
   font-size: 10px;
   font-family: "fira-sans-2", Verdana, sans-serif;
 }
 
 #ticks .tick {
   position: relative;
-  border-bottom: 1px dotted #C4C4C4;
+  border-bottom: 1px dotted #c4c4c4;
   width: 600px;
 }
 
