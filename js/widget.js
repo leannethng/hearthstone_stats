@@ -15,60 +15,47 @@ $(document).ready(function() {
   }); // end getJSON
 
 
-  // $.getJSON('../data/winLoss.json', function(response) {
-  //   var statusHTML = '<tbody>';
-  //   $.each(response.stats.as_class, function(key, value) {
-  //     statusHTML += "<tr class=" + key + " " +"id=" + key +">";
-  //
-  //
-  //     statusHTML += "<th scope='row'>"+ key +"</th>";
-  //       statusHTML += "<td class='loss bar' style='height: 24px;'>";
-  //       statusHTML += "</td>";
-  //       statusHTML += "<td class='win bar' style='height: 24px;'>";
-  //       statusHTML += "</td>";
-  //     statusHTML += "</tr>";
-  //
-  //     // $.each(response.stats.as_class, function(key, value) {
-  //     //   console.log(value);
-  //     //
-  //     // });
-  //
-  //   });
-  //   statusHTML += '</tbody>';
-  //   $('#table').html(statusHTML);
-  //   $("#table").appendTo($("#graph"))
-  // }); // end getJSON
 
   $.getJSON('../data/winLoss.json', function(response) {
-      statusHTML = "<div id='graph'>";
+      var statusHTML = "<div id='graph'>";
+
     $.each(response.stats.as_class, function(key, value) {
+        var losses = (value.losses / value.total) * 100;
+
+          if (isNaN(losses)){
+              losses = losses || 0;
+          }
+
+        var wins = (value.wins / value.total) * 100;
+        if (isNaN(wins)){
+            wins = wins || 0;
+        }
+
       statusHTML += "<div>";
-      statusHTML += '<div class="loss bar" style="height: 40%;">';
-      statusHTML += '<p>2</p>';
+      statusHTML += '<div class="loss bar" style="height:'+ losses +'%;">';
+
+      if (losses === 0){
+        statusHTML += "<p></p>"
+      } else{
+          statusHTML += '<p>' + value.losses +'</p>';
+      }
       statusHTML += "</div>";
-      statusHTML += '<div class="win bar" style="height: 40%;">';
-      statusHTML += '<p>2</p>';
+      statusHTML += '<div class="win bar" style="height:'+ wins +'%;">';
+
+      if (wins === 0){
+        statusHTML += "<p></p>"
+      } else{
+          statusHTML += '<p>' + value.wins +'</p>';
+      }
       statusHTML += "</div>";
-      statusHTML += '<p class="row">' + key + '</p>';
+      statusHTML += '<p class="row">' + key +'</p>';
         statusHTML += "</div>";
-        console.log(statusHTML);
 
-
-      // $.each(response.stats.as_class, function(key, value) {
-      //   console.log(value);
-      //
-      // });
 
     });
     statusHTML += "</div>";
     $('#wrapper').html(statusHTML);
 
-
-      // $.each(response.stats.as_class, function(key, value) {
-      //   statusHTML = key;
-      //   $('.row').html(statusHTML);
-    // $("#table").appendTo($("#graph"))
   }); // end getJSON
-
 
 }); // end ready

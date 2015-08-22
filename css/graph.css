@@ -62,6 +62,10 @@
   border-bottom: 1px dotted #c4c4c4;
    }
 
+#ticks .tick:first-child{
+  border-top: 1px dotted #c4c4c4;
+}
+
 #ticks .tick p {
   position: absolute;
   left: -5em;
