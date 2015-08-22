@@ -1,9 +1,9 @@
 @charset 'UTF-8';
-.grid-container:before, .grid-container:after {
+/*.grid-container:before, .grid-container:after {
   display: block;
   visibility: hidden;
   overflow: hidden;
-}
+}*/
 .grid-container {
   position: relative;
   max-width: 1080px;
@@ -18,7 +18,7 @@
 .grid-30 {
   padding: 10% 0;
 }
-html, body, div, h1, h2, p, ul, li, aside, footer, section {
+html, body, div, h1, h2, p, ul, li, section {
   font: inherit;
   font-size: 100%;
   margin: 0;
@@ -32,7 +32,7 @@ html {
 ul {
   list-style: none;
 }
-aside, footer, section {
+section {
   display: block;
 }
 body {
@@ -72,9 +72,7 @@ h1, h2 {
 h2 {
   font-size: 1.8em;
 }
-aside h2 {
-  margin-bottom: 15px;
-}
+
 p {
   font-size: 1.4em;
   line-height: 1.4;
