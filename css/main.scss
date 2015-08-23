@@ -3,10 +3,10 @@ $color_bg: #edeff0;
 $white: white;
 $black_10: rgba(0, 0, 0, .1);
 $color_dark_grey: #333;
-$color_manatee: #8d9aa5;
+$color_grey: #8d9aa5;
 $color_win: #5fcf80;
 $color_loss: #ed5a5a;
-$color_grey: #c4c4c4;
+
 
 
 //@extend-elements
@@ -41,7 +41,7 @@ body {
 		font-size: 1.4em;
 		line-height: 1.4;
 		margin-bottom: 15px;
-		color: $color_manatee;
+		color: $color_grey;
 	}
 }
 

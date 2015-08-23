@@ -128,9 +128,9 @@ body {
     font-family: fira-sans-2, Verdana, sans-serif; }
     .chart #ticks .tick {
       position: relative;
-      border-bottom: 1px dotted #c4c4c4; }
+      border-bottom: 1px dotted #8d9aa5; }
       .chart #ticks .tick:first-child {
-        border-top: 1px dotted #c4c4c4; }
+        border-top: 1px dotted #8d9aa5; }
       .chart #ticks .tick p {
         position: absolute;
         left: -5em;
