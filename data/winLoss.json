@@ -1,35 +1,30 @@
 {
     "stats": {
         "overall": {
-            "wins": 41,
-            "losses": 29,
-            "total": 70
+            "wins": 44,
+            "losses": 32,
+            "total": 76
         },
         "as_class": {
             "Warrior": {
                 "wins": 0,
-                "losses": 0,
-                "total": 0
-            },
-            "Hunter": {
-                "wins": 0,
-                "losses": 0,
-                "total": 0
+                "losses": 1,
+                "total": 1
             },
             "Rogue": {
                 "wins": 1,
                 "losses": 0,
                 "total": 1
             },
+            "Hunter": {
+                "wins": 2,
+                "losses": 1,
+                "total": 3
+            },
             "Priest": {
                 "wins": 3,
                 "losses": 3,
                 "total": 6
-            },
-            "Shaman": {
-                "wins": 3,
-                "losses": 4,
-                "total": 7
             },
             "Warlock": {
                 "wins": 5,
@@ -40,6 +35,11 @@
                 "wins": 6,
                 "losses": 3,
                 "total": 9
+            },
+            "Shaman": {
+                "wins": 4,
+                "losses": 6,
+                "total": 10
             },
             "Druid": {
                 "wins": 8,
@@ -68,24 +68,19 @@
                 "losses": 2,
                 "total": 6
             },
-            "Paladin": {
-                "wins": 4,
-                "losses": 3,
-                "total": 7
-            },
-            "Shaman": {
-                "wins": 5,
-                "losses": 3,
-                "total": 8
-            },
             "Hunter": {
                 "wins": 3,
                 "losses": 5,
                 "total": 8
             },
-            "Mage": {
-                "wins": 5,
+            "Paladin": {
+                "wins": 4,
                 "losses": 5,
+                "total": 9
+            },
+            "Shaman": {
+                "wins": 6,
+                "losses": 4,
                 "total": 10
             },
             "Warrior": {
@@ -93,10 +88,15 @@
                 "losses": 3,
                 "total": 10
             },
-            "Warlock": {
+            "Mage": {
                 "wins": 6,
                 "losses": 5,
                 "total": 11
+            },
+            "Warlock": {
+                "wins": 7,
+                "losses": 5,
+                "total": 12
             }
         }
     }

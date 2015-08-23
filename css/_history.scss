@@ -1,0 +1,44 @@
+.history {
+	@extend %extend_1;
+	ul {
+
+		list-style: none;
+		li {
+			font-size: 1.6em;
+			position: relative;
+			margin: 15px 0 0;
+			color: $color_manatee;
+		}
+		&.bulleted {
+			margin-bottom: 20px;
+			li {
+				padding-left: 40px;
+				&:before {
+					font-size: .5em;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 25px;
+					padding: 3px 2px 2px;
+					text-align: center;
+					color: $white;
+					border-radius: 2px;
+				}
+			}
+			.won {
+				color: $color_dark_grey;
+				&:before {
+					content: 'Won';
+					background-color: $color_win;
+				}
+			}
+			.lost {
+				color: $color_manatee;
+				&:before {
+					content: 'Lost';
+					background-color: $color_loss;
+				}
+			}
+		}
+	}
+}

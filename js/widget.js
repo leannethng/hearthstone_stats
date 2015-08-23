@@ -20,12 +20,12 @@ $(document).ready(function() {
       var statusHTML = "<div id='graph'>";
 
     $.each(response.stats.as_class, function(key, value) {
-        var losses = (value.losses / value.total) * 100;
+        var losses =(value.losses / value.total) * 100;
 
           if (isNaN(losses)){
               losses = losses || 0;
           }
-
+console.log(losses);
         var wins = (value.wins / value.total) * 100;
         if (isNaN(wins)){
             wins = wins || 0;
@@ -37,7 +37,7 @@ $(document).ready(function() {
       if (losses === 0){
         statusHTML += "<p></p>"
       } else{
-          statusHTML += '<p>' + value.losses +'</p>';
+          statusHTML += '<p>' + losses.toFixed(0) + '%'+'</p>';
       }
       statusHTML += "</div>";
       statusHTML += '<div class="win bar" style="height:'+ wins +'%;">';
@@ -45,7 +45,7 @@ $(document).ready(function() {
       if (wins === 0){
         statusHTML += "<p></p>"
       } else{
-          statusHTML += '<p>' + value.wins +'</p>';
+          statusHTML += '<p>' + wins.toFixed(0) + '%' +'</p>';
       }
       statusHTML += "</div>";
       statusHTML += '<p class="row">' + key +'</p>';
