@@ -11,7 +11,7 @@ body h1, body h2 {
   color: #333; }
 
 body {
-  font-family: Varela Round, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 62.5%;
   padding: 50px 0 0;
   background: #edeff0; }
@@ -22,7 +22,6 @@ body {
   body p {
     font-size: 1.4em;
     line-height: 1.4;
-    margin-bottom: 15px;
     color: #8d9aa5; }
 
 .grid-container {
@@ -79,7 +78,6 @@ body {
   .chart #graph {
     display: flex;
     justify-content: space-between;
-    position: relative;
     width: 70%;
     height: 300px;
     margin: 0 auto;
@@ -87,33 +85,30 @@ body {
     background: transparent;
     font-size: 11px; }
     .chart #graph div {
-      width: 70%;
+      width: 40px;
       position: relative;
-      padding: 0 2%;
       z-index: 2; }
     .chart #graph .row {
       position: absolute;
       bottom: -50px;
-      color: #333; }
+      color: #333;
+      padding-left: 2%; }
     .chart #graph .loss {
       position: absolute;
       background-color: #ed5a5a;
       border-color: transparent; }
       .chart #graph .loss:hover {
-        opacity: .5;
-        color: white; }
+        background-color: #f59f9f; }
     .chart #graph .win {
       position: absolute;
       background-color: #5fcf80;
       border-color: transparent;
       bottom: 0; }
       .chart #graph .win:hover {
-        opacity: .5;
-        color: white; }
+        background-color: #9ae1af; }
     .chart #graph .bar p {
-      margin: 5px 0 0;
-      padding: 0;
-      opacity: 0.4;
+      padding: 0 0 0 3px;
+      opacity: 0.7;
       font-size: 0.85em;
       color: #333; }
   .chart #ticks {
@@ -136,5 +131,19 @@ body {
         left: -5em;
         top: -0.8em;
         margin: 0 0 0 0.5em; }
+  .chart .key {
+    float: right;
+    width: 40px;
+    height: 20px; }
+    .chart .key p {
+      padding: 10px 0 0 0;
+      opacity: 0.7;
+      color: #333; }
+  .chart .win-key {
+    background-color: #5fcf80;
+    margin: -180px 30px 0 0; }
+  .chart .loss-key {
+    background-color: #ed5a5a;
+    margin: -120px 30px 0 0; }
 
 /*# sourceMappingURL=main.css.map */
