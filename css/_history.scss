@@ -1,7 +1,18 @@
+#games{
+	display: inline-block;
+	float: left;
+}
+
+#games-extra{
+	display: inline-block;
+	float: left;
+	clear: right;
+}
+
 .history {
 	@extend %extend_1;
-	ul {
 
+	ul {
 		list-style: none;
 		li {
 			font-size: 1.6em;
@@ -41,4 +52,8 @@
 			}
 		}
 	}
+
+
+
+
 }

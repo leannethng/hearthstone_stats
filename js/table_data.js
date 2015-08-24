@@ -13,7 +13,17 @@ $(document).ready(function() {
     statusHTML += '</ul>';
     $('#games').html(statusHTML);
   }); // end getJSON
+  
+  $.getJSON('../data/classes.json', function(response) {
+    var statusHTML = '<ul class="bulleted">';
+    $.each(response.history, function(index, hero) {
+      // console.log(typeof hero);
 
+        statusHTML += '<li>'+ hero.mode + '</li>';
+    });
+    statusHTML += '</ul>';
+    $('#games-extra').html(statusHTML);
+  }); // end getJSON
 
 
   $.getJSON('../data/winLoss.json', function(response) {

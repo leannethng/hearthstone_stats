@@ -37,9 +37,18 @@ body {
     background: white;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
     .grid-container .wrapper .contained .heading {
-      margin-bottom: 20px; }
+      margin-bottom: 40px; }
     .grid-container .wrapper .contained section {
       display: block; }
+
+#games {
+  display: inline-block;
+  float: left; }
+
+#games-extra {
+  display: inline-block;
+  float: left;
+  clear: right; }
 
 .history ul {
   list-style: none; }
@@ -74,8 +83,12 @@ body {
         background-color: #ed5a5a; }
 
 .chart {
-  padding-top: 1%;
-  padding-bottom: 5%; }
+  display: block;
+  clear: both;
+  padding-top: 5%;
+  padding-bottom: 10%; }
+  .chart h2 {
+    padding-bottom: 3%; }
   .chart #graph {
     display: flex;
     justify-content: space-between;
