@@ -74,7 +74,8 @@ body {
         background-color: #ed5a5a; }
 
 .chart {
-  padding: 10% 0; }
+  padding-top: 1%;
+  padding-bottom: 5%; }
   .chart #graph {
     display: flex;
     justify-content: space-between;
