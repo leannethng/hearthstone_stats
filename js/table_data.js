@@ -13,7 +13,7 @@ $(document).ready(function() {
     statusHTML += '</ul>';
     $('#games').html(statusHTML);
   }); // end getJSON
-  
+
   $.getJSON('../data/classes.json', function(response) {
     var statusHTML = '<ul class="bulleted">';
     $.each(response.history, function(index, hero) {
@@ -25,6 +25,7 @@ $(document).ready(function() {
     $('#games-extra').html(statusHTML);
   }); // end getJSON
 
+//Bar chart
 
   $.getJSON('../data/winLoss.json', function(response) {
       var statusHTML = "<div id='graph'>";
@@ -41,7 +42,7 @@ console.log(losses);
             wins = wins || 0;
         }
 
-      statusHTML += "<div>";
+      statusHTML += '<div class="wins_' + value.wins + ' losses_'+ value.losses +'" >';
       statusHTML += '<div class="loss bar" style="height:'+ losses +'%;">';
 
       if (losses === 0){
