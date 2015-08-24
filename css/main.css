@@ -142,8 +142,12 @@ body {
   .chart .win-key {
     background-color: #5fcf80;
     margin: -180px 30px 0 0; }
+    .chart .win-key:hover {
+      background-color: #9ae1af; }
   .chart .loss-key {
     background-color: #ed5a5a;
     margin: -120px 30px 0 0; }
+    .chart .loss-key:hover {
+      background-color: #f59f9f; }
 
 /*# sourceMappingURL=main.css.map */
