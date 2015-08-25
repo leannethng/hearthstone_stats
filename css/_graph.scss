@@ -1,5 +1,6 @@
 .chart {
 	@extend %extend_1;
+
 	display: block;
 	clear: both;
 	padding-top: 5%;
@@ -9,6 +10,14 @@
 	}
 	#graph {
 		display: flex;
+		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	 display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	 display: -ms-flexbox;      /* TWEENER - IE 10 */
+	 display: -webkit-flex;     /* NEW - Chrome */
+	 display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+		-webkit-justify-content: space-between;
+		-moz-justify-content: space-between;
+		-ms-justify-content: space-between;
 		justify-content: space-between;
 		width: 70%;
 		height: 300px;
