@@ -1,11 +1,9 @@
 $(document).ready(function() {
 
 //history
-<<<<<<< HEAD
+
   $.getJSON('http://www.leannethng.com/hearthstone_stats/data/classes.json', function(response) {
-=======
-  $.getJSON('../data/classes.json', function(response) {
->>>>>>> master
+
     var statusHTML = '<ul class="bulleted">';
     $.each(response.history, function(index, hero) {
       // console.log(typeof hero);
@@ -28,18 +26,9 @@ $(document).ready(function() {
     statusHTML += '</ul>';
     $('#games-extra').html(statusHTML);
 
-<<<<<<< HEAD
-    //making new list of time
-    //  $("li.timeago").timeago();
-    // var statusHTML = '<ul class="bulleted">';
-    // $.each(response.history, function(index, hero) {
-    //   // console.log(typeof hero);
-    //   statusHTML += '<li class="timeago" title="'+ hero.added +'></li>';
-    // });
-    // statusHTML += '</ul>';
-    // console.log(statusHTML);
-    // $('#games-times').html(statusHTML);
-=======
+
+
+
 
     //making new list of time
     // $("abbr.timeago").timeago();
@@ -51,7 +40,7 @@ $(document).ready(function() {
     // statusHTML += '</ul>';
     // console.log(statusHTML);
     // $('#games-time').html(statusHTML);
->>>>>>> master
+
 
   }); // end getJSON
 
