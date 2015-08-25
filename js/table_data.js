@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 //Win rate chart
 
-  $.getJSON('../data/winLoss.json', function(response) {
+  $.getJSON('http://www.leannethng.com/data/winLoss.json', function(response) {
       var statusHTML = "<div id='graph'>";
 
     $.each(response.stats.as_class, function(key, value) {
