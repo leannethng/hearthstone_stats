@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
 //history
-  $.getJSON('../data/classes.json', function(response) {
+  $.getJSON('http://www.leannethng.com/hearthstone_stats/data/classes.json', function(response) {
     var statusHTML = '<ul class="bulleted">';
     $.each(response.history, function(index, hero) {
       // console.log(typeof hero);
@@ -42,7 +42,7 @@ $(document).ready(function() {
 
 //Win rate chart
 
-  $.getJSON('http://www.leannethng.com/data/winLoss.json', function(response) {
+  $.getJSON('http://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
       var statusHTML = "<div id='graph'>";
 
     $.each(response.stats.as_class, function(key, value) {
