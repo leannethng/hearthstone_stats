@@ -24,16 +24,17 @@ $(document).ready(function() {
     statusHTML += '</ul>';
     $('#games-extra').html(statusHTML);
 
+
     //making new list of time
-    //  $("li.timeago").timeago();
+    // $("abbr.timeago").timeago();
     // var statusHTML = '<ul class="bulleted">';
     // $.each(response.history, function(index, hero) {
     //   // console.log(typeof hero);
-    //   statusHTML += '<li class="timeago" title="'+ hero.added +'></li>';
+    //   statusHTML += '<li> <abbr class="timeago" title="'+ hero.added +'>'+ hero.added+'</abbr></li>';
     // });
     // statusHTML += '</ul>';
     // console.log(statusHTML);
-    // $('#games-times').html(statusHTML);
+    // $('#games-time').html(statusHTML);
 
   }); // end getJSON
 
