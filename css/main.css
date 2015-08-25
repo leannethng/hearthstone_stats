@@ -41,11 +41,11 @@ body {
     .grid-container .wrapper .contained section {
       display: block; }
 
-#games {
+#games, #games-extra {
   display: inline-block;
   float: left; }
 
-#games-extra {
+#games-times {
   display: inline-block;
   float: left;
   clear: right; }
@@ -57,6 +57,8 @@ body {
     position: relative;
     margin: 15px 0 0;
     color: #8d9aa5; }
+    .history ul li:nth-last-of-type(1n+7) {
+      display: none; }
   .history ul.bulleted {
     margin-bottom: 20px; }
     .history ul.bulleted li {

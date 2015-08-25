@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+//history
   $.getJSON('../data/classes.json', function(response) {
     var statusHTML = '<ul class="bulleted">';
     $.each(response.history, function(index, hero) {
@@ -12,20 +14,33 @@ $(document).ready(function() {
     });
     statusHTML += '</ul>';
     $('#games').html(statusHTML);
-  }); // end getJSON
 
-  $.getJSON('../data/classes.json', function(response) {
+    //making new list of type of match
     var statusHTML = '<ul class="bulleted">';
     $.each(response.history, function(index, hero) {
       // console.log(typeof hero);
-
-        statusHTML += '<li>'+ hero.mode + '</li>';
+      statusHTML += '<li>'+ hero.mode + '</li>';
     });
     statusHTML += '</ul>';
     $('#games-extra').html(statusHTML);
+
+    //making new list of time
+    //  $("li.timeago").timeago();
+    // var statusHTML = '<ul class="bulleted">';
+    // $.each(response.history, function(index, hero) {
+    //   // console.log(typeof hero);
+    //   statusHTML += '<li class="timeago" title="'+ hero.added +'></li>';
+    // });
+    // statusHTML += '</ul>';
+    // console.log(statusHTML);
+    // $('#games-times').html(statusHTML);
+
   }); // end getJSON
 
-//Bar chart
+//history mode
+
+
+//Win rate chart
 
   $.getJSON('../data/winLoss.json', function(response) {
       var statusHTML = "<div id='graph'>";
@@ -36,27 +51,27 @@ $(document).ready(function() {
           if (isNaN(losses)){
               losses = losses || 0;
           }
-console.log(losses);
+// console.log(losses);
         var wins = (value.wins / value.total) * 100;
         if (isNaN(wins)){
             wins = wins || 0;
         }
 
-      statusHTML += '<div class="wins_' + value.wins + ' losses_'+ value.losses +'" >';
+      statusHTML += '<div class="columns" >';
       statusHTML += '<div class="loss bar" style="height:'+ losses +'%;">';
 
       if (losses === 0){
-        statusHTML += "<p></p>"
+        statusHTML += "<p class='loss-percentage'>0%</p>"
       } else{
-          statusHTML += '<p>' + losses.toFixed(0) + '%'+'</p>';
+          statusHTML += "<p class='loss-percentage'>" + losses.toFixed(0) + '%'+'</p>';
       }
       statusHTML += "</div>";
       statusHTML += '<div class="win bar" style="height:'+ wins +'%;">';
 
       if (wins === 0){
-        statusHTML += "<p></p>"
+        statusHTML += "<p class='win-percentage' style='display: none;'>0%</p>"
       } else{
-          statusHTML += '<p>' + wins.toFixed(0) + '%' +'</p>';
+          statusHTML += "<p class='win-percentage'>" + wins.toFixed(0) + '%' +'</p>';
       }
       statusHTML += "</div>";
       statusHTML += '<p class="row">' + key +'</p>';
