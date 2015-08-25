@@ -1,9 +1,9 @@
-#games{
+#games, #games-extra{
 	display: inline-block;
 	float: left;
 }
 
-#games-extra{
+#games-times{
 	display: inline-block;
 	float: left;
 	clear: right;
@@ -14,11 +14,14 @@
 
 	ul {
 		list-style: none;
-		li {
+		li{
 			font-size: 1.6em;
 			position: relative;
 			margin: 15px 0 0;
 			color: $color_grey;
+			&:nth-last-of-type(1n+7){
+				display: none;
+			}
 		}
 		&.bulleted {
 			margin-bottom: 20px;
