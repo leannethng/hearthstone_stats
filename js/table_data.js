@@ -68,7 +68,7 @@ $(document).ready(function() {
       statusHTML += '<div class="loss bar" style="height:'+ losses +'%;">';
 
       if (losses === 0){
-        statusHTML += "<p class='loss-percentage'>0%</p>"
+        statusHTML += "<p class='loss-percentage' style='display: none;'>0%</p>"
       } else{
           statusHTML += "<p class='loss-percentage'>" + losses.toFixed(0) + '%'+'</p>';
       }
