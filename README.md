@@ -9,6 +9,6 @@ To do:
 + Style the win/loss buttons
 + Make the site responsive
 + Add average win rate
-+ Add in time game was played in History section
++ Add in the 'time game was played' column in History section
 
 
