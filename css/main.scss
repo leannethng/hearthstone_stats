@@ -20,7 +20,7 @@ $font:'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 2.4em;
 	font-weight: 500;
 	line-height: 1.2;
-	margin-bottom: 8px;
+	// margin-bottom: 8px;
 	color: $color_dark_grey;
 }
 
@@ -33,6 +33,8 @@ body {
 	h1 {
 		margin: 0;
 		@extend %extend_3;
+			padding-bottom: 4%;
+
 	}
 	h2 {
 		@extend %extend_3;
@@ -54,15 +56,22 @@ body {
 	.wrapper {
 		@extend %extend_1;
 		.contained {
+			display: inline-block;
+
 			position: relative;
 			overflow: hidden;
 			margin-bottom: 30px;
-			padding: 30px 30px;
+			padding: 10px 30px 30px;
 			border-radius: 5px;
 			background: $white;
 			box-shadow: 0 1px 0 0 $black_10;
+				&.longbox{
+					display: block;
+
+				}
 			.heading {
 				margin-bottom: 40px;
+
 			}
 			section {
 				display: block;

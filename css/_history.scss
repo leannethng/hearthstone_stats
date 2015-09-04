@@ -3,7 +3,7 @@
 	float: left;
 }
 
-#games-times{
+#games-time{
 	display: inline-block;
 	float: left;
 	clear: right;
@@ -11,7 +11,9 @@
 
 .history {
 	@extend %extend_1;
-
+	h2{
+		padding-bottom: 6%;
+	}
 	ul {
 		list-style: none;
 		li{
@@ -26,8 +28,13 @@
 		&.bulleted {
 			margin-bottom: 20px;
 			li {
-				padding-left: 40px;
+
+				&.cols{
+					padding-left: 2px;
+				}
+
 				&:before {
+					margin-left: -40px;
 					font-size: .5em;
 					position: absolute;
 					top: 0;

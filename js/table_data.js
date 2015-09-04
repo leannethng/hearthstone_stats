@@ -17,34 +17,44 @@ $(document).ready(function() {
     statusHTML += '</ul>';
     $('#games').html(statusHTML);
 
-    //making new list of type of match
+//making new list of type of match
     var statusHTML = '<ul class="bulleted">';
     $.each(response.history, function(index, hero) {
       // console.log(typeof hero);
-      statusHTML += '<li>'+ hero.mode + '</li>';
+      statusHTML += '<li class="cols">'+ hero.mode + '</li>';
     });
     statusHTML += '</ul>';
     $('#games-extra').html(statusHTML);
 
 
+  var statusHTML = '<ul class="bulleted">';
+  $.each(response.history, function(index, hero) {
+    // console.log(typeof hero);
+
+    var date = new Date(hero.added);
+    var month = new Array();
+      month[0] = "January";
+      month[1] = "February";
+      month[2] = "March";
+      month[3] = "April";
+      month[4] = "May";
+      month[5] = "June";
+      month[6] = "July";
+      month[7] = "August";
+      month[8] = "September";
+      month[9] = "October";
+      month[10] = "November";
+      month[11] = "December";
 
 
-
-    //making new list of time
-    // $("abbr.timeago").timeago();
-    // var statusHTML = '<ul class="bulleted">';
-    // $.each(response.history, function(index, hero) {
-    //   // console.log(typeof hero);
-    //   statusHTML += '<li> <abbr class="timeago" title="'+ hero.added +'>'+ hero.added+'</abbr></li>';
-    // });
-    // statusHTML += '</ul>';
-    // console.log(statusHTML);
-    // $('#games-time').html(statusHTML);
-
+    statusHTML += '<li class="cols">'+ month[date.getMonth()] + ' ' + date.getDate() +'th' +  '</li>';
+  });
+  statusHTML += '</ul>';
+  $('#games-time').html(statusHTML);
 
   }); // end getJSON
 
-//history mode
+
 
 
 //Win rate chart
