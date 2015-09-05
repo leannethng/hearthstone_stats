@@ -38,10 +38,11 @@ body {
     background: white;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
     .grid-container .wrapper .contained.two-thirds {
-      width: 430px; }
+      float: left;
+      min-width: 48%; }
     .grid-container .wrapper .contained.third {
-      width: 30%;
-      height: 300px; }
+      min-width: 36.5%;
+      height: 303px; }
     .grid-container .wrapper .contained.full {
       display: block;
       clear: right; }
@@ -189,6 +190,6 @@ body {
       background-color: #f59f9f; }
 
 .circle {
-  margin: 30% 10% 30% 21%; }
+  margin: 15% 0 0 30%; }
 
 /*# sourceMappingURL=main.css.map */
