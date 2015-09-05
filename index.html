@@ -16,16 +16,21 @@
         <div class="heading">
           <h1>Hearthstone Games</h1>
         </div>
-        <div class="contained halfbox">
+        <div class="contained two-thirds">
         <section class="history">
           <h2>Recent Games Played</h2>
           <div id="games"></div>
           <div id="games-extra"></div>
           <div id="games-time"></div>
-
         </section>
           </div>
-          <div class="contained longbox">
+
+          <div class="contained third">
+              <h2>Winrate Percentage </h2>
+            <div class="circle" id="circles-1"></div>
+          </div>
+
+          <div class="contained full">
         <section class="chart">
           <h2>Win Rate Chart</h2>
           <div id="wrapper">
@@ -64,9 +69,10 @@
     </div>
   </div>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="js/circles.min.js"></script>
   <script src="js/table_data.js"></script>
-    <!-- <script src="js/timeago.js"></script> -->
   <script src="js/table.js"></script>
+  <script src="js/avg_percentage.js"></script>
 </body>
 
 </html>

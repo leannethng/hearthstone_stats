@@ -32,26 +32,29 @@ body {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    margin-bottom: 30px;
+    margin: 0 10px 30px;
     padding: 10px 30px 30px;
     border-radius: 5px;
     background: white;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
-    .grid-container .wrapper .contained.longbox {
-      display: block; }
+    .grid-container .wrapper .contained.two-thirds {
+      width: 430px; }
+    .grid-container .wrapper .contained.third {
+      width: 30%;
+      height: 300px; }
+    .grid-container .wrapper .contained.full {
+      display: block;
+      clear: right; }
     .grid-container .wrapper .contained .heading {
       margin-bottom: 40px; }
     .grid-container .wrapper .contained section {
       display: block; }
 
 #games, #games-extra {
-  display: inline-block;
-  float: left; }
+  display: inline-block; }
 
 #games-time {
-  display: inline-block;
-  float: left;
-  clear: right; }
+  display: inline-block; }
 
 .history h2 {
   padding-bottom: 6%; }
@@ -184,5 +187,8 @@ body {
     margin: -120px 30px 0 0; }
     .chart .loss-key:hover {
       background-color: #f59f9f; }
+
+.circle {
+  margin: 30% 10% 30% 21%; }
 
 /*# sourceMappingURL=main.css.map */
