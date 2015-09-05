@@ -1,2 +1,103 @@
-
-{"stats":{"overall":{"wins":50,"losses":38,"total":88},"as_class":{"Warrior":{"wins":0,"losses":0,"total":0},"Rogue":{"wins":1,"losses":0,"total":1},"Priest":{"wins":3,"losses":3,"total":6},"Hunter":{"wins":4,"losses":5,"total":9},"Mage":{"wins":6,"losses":3,"total":9},"Warlock":{"wins":6,"losses":4,"total":10},"Shaman":{"wins":4,"losses":7,"total":11},"Druid":{"wins":8,"losses":7,"total":15},"Paladin":{"wins":18,"losses":9,"total":27}},"vs_class":{"Priest":{"wins":2,"losses":3,"total":5},"Rogue":{"wins":4,"losses":2,"total":6},"Druid":{"wins":6,"losses":0,"total":6},"Hunter":{"wins":3,"losses":6,"total":9},"Paladin":{"wins":5,"losses":6,"total":11},"Warrior":{"wins":7,"losses":5,"total":12},"Shaman":{"wins":8,"losses":4,"total":12},"Warlock":{"wins":7,"losses":6,"total":13},"Mage":{"wins":8,"losses":6,"total":14}}}}
+{
+    "stats": {
+        "overall": {
+            "wins": 71,
+            "losses": 58,
+            "total": 129
+        },
+        "as_class": {
+            "Rogue": {
+                "wins": 1,
+                "losses": 2,
+                "total": 3
+            },
+            "Priest": {
+                "wins": 3,
+                "losses": 3,
+                "total": 6
+            },
+            "Warrior": {
+                "wins": 2,
+                "losses": 4,
+                "total": 6
+            },
+            "Mage": {
+                "wins": 6,
+                "losses": 3,
+                "total": 9
+            },
+            "Warlock": {
+                "wins": 6,
+                "losses": 4,
+                "total": 10
+            },
+            "Shaman": {
+                "wins": 7,
+                "losses": 11,
+                "total": 18
+            },
+            "Druid": {
+                "wins": 11,
+                "losses": 9,
+                "total": 20
+            },
+            "Hunter": {
+                "wins": 12,
+                "losses": 8,
+                "total": 20
+            },
+            "Paladin": {
+                "wins": 23,
+                "losses": 14,
+                "total": 37
+            }
+        },
+        "vs_class": {
+            "Rogue": {
+                "wins": 6,
+                "losses": 3,
+                "total": 9
+            },
+            "Druid": {
+                "wins": 10,
+                "losses": 1,
+                "total": 11
+            },
+            "Hunter": {
+                "wins": 5,
+                "losses": 7,
+                "total": 12
+            },
+            "Priest": {
+                "wins": 6,
+                "losses": 6,
+                "total": 12
+            },
+            "Paladin": {
+                "wins": 7,
+                "losses": 8,
+                "total": 15
+            },
+            "Warrior": {
+                "wins": 8,
+                "losses": 7,
+                "total": 15
+            },
+            "Shaman": {
+                "wins": 9,
+                "losses": 7,
+                "total": 16
+            },
+            "Warlock": {
+                "wins": 10,
+                "losses": 8,
+                "total": 18
+            },
+            "Mage": {
+                "wins": 10,
+                "losses": 11,
+                "total": 21
+            }
+        }
+    }
+}
