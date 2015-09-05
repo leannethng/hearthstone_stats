@@ -1,17 +1,18 @@
 $(document).ready(function() {
   $.getJSON('http://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
 
-    $.each(response.stats.overall, function(key, value) {
-        var winrate =(value.wins / value.total) * 100;
-        console.log(winrate.toFixed(0));
+    var winrate = (function(){
+      var wins = response.stats.overall.wins;
+      var total = response.stats.overall.total;
+      return (wins / total) * 100;
+    }());
 
-  })
 
         var myCircle = Circles.create({
 
           id:                  'circles-1',
           radius:              70,
-
+          value:               winrate.toFixed(0),
           maxValue:            100,
           width:               10,
           text:                function(value){return value + '%';},
@@ -25,8 +26,7 @@ $(document).ready(function() {
           styleText:           true
         });
 
-        myCircle.value = winrate;
-        console.log(myCircle.value)
+    
 
   });
 });
