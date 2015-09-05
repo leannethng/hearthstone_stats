@@ -1,37 +1,33 @@
 $(document).ready(function() {
 
-//history
+//HISTORY
 
   $.getJSON('http://www.leannethng.com/hearthstone_stats/data/classes.json', function(response) {
-
+    //getting the wins and losses and hero and opponent
     var statusHTML = '<ul class="bulleted">';
-    $.each(response.history, function(index, hero) {
-      // console.log(typeof hero);
-      if (hero.result === "win") {
+    $.each(response.history, function(index, value) {
+      if (value.result === "win") {
         statusHTML += '<li class="won">';
       } else {
         statusHTML += '<li class="lost">';
       }
-      statusHTML += hero.hero + ' vs ' + hero.opponent + '</li>';
+      statusHTML += value.hero + ' vs ' + value.opponent + '</li>';
     });
     statusHTML += '</ul>';
     $('#games').html(statusHTML);
 
-//making new list of type of match
+    //making new list of type of match
     var statusHTML = '<ul class="bulleted">';
-    $.each(response.history, function(index, hero) {
-      // console.log(typeof hero);
-      statusHTML += '<li class="cols">'+ hero.mode + '</li>';
+    $.each(response.history, function(index, value) {
+      statusHTML += '<li class="cols">'+ value.mode + '</li>';
     });
     statusHTML += '</ul>';
     $('#games-extra').html(statusHTML);
 
-
-  var statusHTML = '<ul class="bulleted">';
-  $.each(response.history, function(index, hero) {
-    // console.log(typeof hero);
-
-    var date = new Date(hero.added);
+    //getting the date
+    var statusHTML = '<ul class="bulleted">';
+    $.each(response.history, function(index, value) {
+    var date = new Date(value.added);
     var month = new Array();
       month[0] = "January";
       month[1] = "February";
@@ -45,36 +41,57 @@ $(document).ready(function() {
       month[9] = "October";
       month[10] = "November";
       month[11] = "December";
-
-
     statusHTML += '<li class="cols">'+ month[date.getMonth()] + ' ' + date.getDate() +'th' +  '</li>';
   });
   statusHTML += '</ul>';
   $('#games-time').html(statusHTML);
-
   }); // end getJSON
 
 
+//WINRATE PERCENTAGE
+  $.getJSON('http://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
+    var winrate = (function(){
+      var wins = response.stats.overall.wins;
+      var total = response.stats.overall.total;
+      return (wins / total) * 100;
+    }());
+        //creating a circle svg with the circles library
+        var myCircle = Circles.create({
+
+          id:                  'circles-1',
+          radius:              70,
+          //calling in my values from the JSON
+          value:               winrate.toFixed(0),
+          maxValue:            100,
+          width:               10,
+          text:                function(value){return value + '%';},
+          colors:              ['#D3B6C6', '#4B253A'],
+          duration:            400,
+          wrpClass:            'circles-wrp',
+          textClass:           'circles-text',
+          valueStrokeClass:    'circles-valueStroke',
+          maxValueStrokeClass: 'circles-maxValueStroke',
+          styleWrapper:        true,
+          styleText:           true
+        });
+  });
 
 
-//Win rate chart
-
+//WIN RATE CHART
   $.getJSON('http://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
       var statusHTML = "<div id='graph'>";
-
+    //using key value instead of index value
+    //getting the percentage value and if 0 replace NaN with 0
     $.each(response.stats.as_class, function(key, value) {
         var losses =(value.losses / value.total) * 100;
           if (isNaN(losses)){
               losses = losses || 0;
           }
-// console.log(losses);
+
         var wins = (value.wins / value.total) * 100;
         if (isNaN(wins)){
             wins = wins || 0;
         }
-
-
-
       statusHTML += '<div class="columns" >';
       statusHTML += '<div class="loss bar" style="height:'+ losses +'%;">';
 
@@ -97,9 +114,7 @@ $(document).ready(function() {
       }
       statusHTML += "</div>";
       statusHTML += '<p class="row">' + key +'</p>';
-        statusHTML += "</div>";
-
-
+      statusHTML += "</div>";
     });
     statusHTML += "</div>";
     $('#wrapper').html(statusHTML);
