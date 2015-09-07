@@ -1,13 +1,27 @@
+#games, #games-extra, #games-time{
+	display: inline-block;
+}
 
+#games-time{
+
+	@media screen and (max-width: $break-xsmall){
+		display: none;
+	}
+}
+#games-extra{
+
+	@media screen and (max-width: $break-mobile){
+		display: none;
+	}
+}
 
 
 .history {
-	@extend %extend_1;
+
+	margin: 0 10px 30px;
+	padding: 10px 30px 30px;
 	h2{
 		padding-bottom: 6%;
-	}
-	#games, #games-extra, #games-time{
-		display: inline-block;
 	}
 	ul {
 		list-style: none;
