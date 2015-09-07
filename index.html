@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hearthstone Games Played</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hearthstone Games Played</title>
-  <link href='http://fonts.googleapis.com/css?family=Lato:400,700,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="css/main.css">
-</head>
+  <body>
 
-<body>
-  <div class="grid-container centered">
-    <div class="wrapper">
 
-        <div class="heading">
-          <h1>Hearthstone Games</h1>
-        </div>
-        <div class="contained two-thirds">
+    <div class="grid-container">
+      <div class="heading">
+        <h1>Hearthstone Games</h1>
+      </div>
+<!-- History of games played -->
+      <div class="column two-thirds">
         <section class="history">
           <h2>Recent Games Played</h2>
           <div id="games"></div>
           <div id="games-extra"></div>
           <div id="games-time"></div>
         </section>
-          </div>
+      </div>
+<!-- winrate percentage circle -->
+      <div class="column third">
+        <section class="winrate">
+          <h2>Winrate Percentage </h2>
+          <div class="circle" id="circles-1"></div>
+        </section>
+      </div>
 
-          <div class="contained third">
-              <h2>Winrate Percentage </h2>
-            <div class="circle" id="circles-1"></div>
-          </div>
-
-          <div class="contained full">
+<!-- Stacked chart -->
+      <div class="column full">
         <section class="chart">
           <h2>Win Rate Chart</h2>
+<!-- Wrapper needed to attach JS json data -->
           <div id="wrapper">
             <div id="graph"></div>
-
           </div>
-
+<!-- Graph lines -->
           <div id="ticks">
             <div class="tick" style="height: 74px;">
               <p>100%</p>
@@ -52,27 +55,20 @@
               <p>25%</p>
             </div>
           </div>
-
-
+<!-- win loss buttons -->
           <button class=" key win-key">
               Win
           </button>
-
           <button class="key loss-key">
             Loss
           </button>
-
-
         </section>
       </div>
-
     </div>
-  </div>
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="js/circles.min.js"></script>
-  <script src="js/data_dom_elements.js"></script>
-  <script src="js/table_buttons.js"></script>
-
-</body>
-
+<!-- Scripts -->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/circles.min.js"></script>
+    <script src="js/data_dom_elements.js"></script>
+    <script src="js/table_buttons.js"></script>
+  </body>
 </html>

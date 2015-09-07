@@ -1,18 +1,13 @@
-#games, #games-extra{
-	display: inline-block;
-	
 
-}
 
-#games-time{
-	display: inline-block;
-
-}
 
 .history {
 	@extend %extend_1;
 	h2{
 		padding-bottom: 6%;
+	}
+	#games, #games-extra, #games-time{
+		display: inline-block;
 	}
 	ul {
 		list-style: none;
@@ -28,11 +23,9 @@
 		&.bulleted {
 			margin-bottom: 20px;
 			li {
-
 				&.cols{
 					padding-left: 2px;
 				}
-
 				&:before {
 					margin-left: -40px;
 					font-size: .5em;
@@ -62,8 +55,4 @@
 			}
 		}
 	}
-
-
-
-
 }

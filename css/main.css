@@ -1,4 +1,4 @@
-.grid-container .wrapper, .history, .chart {
+.grid-container, .history, .chart {
   box-sizing: border-box;
   padding-right: 15px;
   padding-left: 15px; }
@@ -28,7 +28,7 @@ body {
   position: relative;
   max-width: 1080px;
   margin: 0 auto; }
-  .grid-container .wrapper .contained {
+  .grid-container .column {
     display: inline-block;
     position: relative;
     overflow: hidden;
@@ -37,28 +37,28 @@ body {
     border-radius: 5px;
     background: white;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
-    .grid-container .wrapper .contained.two-thirds {
+    .grid-container .column.two-thirds {
       float: left;
-      min-width: 48%; }
-    .grid-container .wrapper .contained.third {
-      min-width: 36.5%;
-      height: 303px; }
-    .grid-container .wrapper .contained.full {
+      width: 48%; }
+    .grid-container .column.third {
+      width: 36.5%;
+      height: 303px;
+      float: right; }
+      @media screen and (max-width: 1090px) {
+        .grid-container .column.third {
+          width: 34.5%; } }
+    .grid-container .column.full {
       display: block;
-      clear: right; }
-    .grid-container .wrapper .contained .heading {
+      clear: both; }
+    .grid-container .column .heading {
       margin-bottom: 40px; }
-    .grid-container .wrapper .contained section {
+    .grid-container .column section {
       display: block; }
-
-#games, #games-extra {
-  display: inline-block; }
-
-#games-time {
-  display: inline-block; }
 
 .history h2 {
   padding-bottom: 6%; }
+.history #games, .history #games-extra, .history #games-time {
+  display: inline-block; }
 .history ul {
   list-style: none; }
   .history ul li {
