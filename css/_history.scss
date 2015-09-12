@@ -1,16 +1,25 @@
-#games, #games-extra{
+#games, #games-extra, #games-time{
 	display: inline-block;
-	
-
 }
 
 #games-time{
-	display: inline-block;
 
+	@media screen and (max-width: $break-xsmall){
+		display: none;
+	}
+}
+#games-extra{
+
+	@media screen and (max-width: $break-mobile){
+		display: none;
+	}
 }
 
+
 .history {
-	@extend %extend_1;
+
+	margin: 0 10px 30px;
+	padding: 10px 30px 30px;
 	h2{
 		padding-bottom: 6%;
 	}
@@ -28,11 +37,9 @@
 		&.bulleted {
 			margin-bottom: 20px;
 			li {
-
 				&.cols{
 					padding-left: 2px;
 				}
-
 				&:before {
 					margin-left: -40px;
 					font-size: .5em;
@@ -62,8 +69,4 @@
 			}
 		}
 	}
-
-
-
-
 }

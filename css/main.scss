@@ -10,6 +10,13 @@ $color_loss: #ed5a5a;
 //font
 $font:'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
 
+//media queries
+$break-large:1090px;
+$break-mid: 960px;
+$break-small: 793px;
+$break-xsmall: 533px;
+$break-mobile: 420px;
+
 //@extend-elements
 %extend_1 {
 	box-sizing: border-box;
@@ -48,49 +55,62 @@ body {
 	}
 }
 
-
 .grid-container {
 	position: relative;
 	max-width: 1080px;
-
 	margin: 0 auto;
-	.wrapper {
-		@extend %extend_1;
+	@extend %extend_1;
 
-		.contained {
-			display: inline-block;
-			position: relative;
-			overflow: hidden;
-			margin: 0 10px 30px;
-
-			padding: 10px 30px 30px;
-			border-radius: 5px;
-			background: $white;
-			box-shadow: 0 1px 0 0 $black_10;
-				&.two-thirds{
+	.column {
+		display: inline-block;
+		position: relative;
+		overflow: hidden;
+		margin: 1%;
+		// padding: 10px 30px 30px;
+		border-radius: 5px;
+		background: $white;
+		box-shadow: 0 1px 0 0 $black_10;
+			&.two-thirds{
 				float: left;
-				min-width: 48%;
+				width: 54%;
+				@media screen and (max-width: $break-mid){
+					width: 63%;
 				}
-
-				&.third{
-					min-width: 36.5%;
-
-					height: 303px;
-
+				@media screen and (max-width: $break-small){
+						width: 100%;
+							float: none;
 				}
-				&.full{
-					display: block;
-					clear: right;
-					
-
-				}
-			.heading {
-				margin-bottom: 40px;
-
 			}
-			section {
+			&.third{
+				width: 42%;
+				height: 374px;
+				float: right;
+				@media screen and (max-width: $break-large){
+						// width: 34.5%;
+
+				}
+				@media screen and (max-width: $break-mid){
+						height: 369px;
+						width: 33%;
+				}
+				@media screen and (max-width: $break-small){
+						height: 293px;
+						width: 100%;
+						float: none;
+				}
+			}
+			&.full{
 				display: block;
+				clear: both;
+				@media screen and (max-width: $break-small){
+					width: 100%;
+				}
 			}
+		.heading {
+			margin-bottom: 40px;
+		}
+		section {
+			display: block;
 		}
 	}
 }
