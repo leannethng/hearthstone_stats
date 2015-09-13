@@ -1,5 +1,6 @@
 #games, #games-extra, #games-time{
 	display: inline-block;
+
 }
 
 #games-time{
@@ -27,6 +28,7 @@
 		list-style: none;
 		li{
 			font-size: 1.6em;
+			font-weight: 300;
 			position: relative;
 			margin: 15px 0 0;
 			color: $color_grey;
