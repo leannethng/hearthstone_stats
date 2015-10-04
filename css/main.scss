@@ -1,12 +1,13 @@
 //colors
-//#282D36
+
 $color_bg: #253033;
 $white: white;
 $black_10: rgba(0, 0, 0, .1);
 $color_dark_grey: #333;
 $color_grey: #8d9aa5;
-$color_win: #37AB7F;
-$color_loss: #89C9AE;
+$color_win: #5ab795;
+$color_loss: #db664e;
+// #89C9AE, 37AB7F
 
 //font
 $font:'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -18,19 +19,7 @@ $break-small: 793px;
 $break-xsmall: 533px;
 $break-mobile: 420px;
 
-//@extend-elements
-%extend_1 {
-	box-sizing: border-box;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-%extend_3 {
-	font-size: 2.4em;
-	font-weight: 300;
-	line-height: 1.2;
-	// margin-bottom: 8px;
-	color: $color_dark_grey;
-}
+
 
 //Main layout
 body {
@@ -39,89 +28,61 @@ body {
 	padding: 50px 0 0;
 	background: $color_bg;
 	h1 {
-		margin: 0;
+			margin: 0 0 3% 15px;
 			font-size: 3.5em;
 			font-weight: 100;
 			color: #89C9AE;
-			padding-bottom: 4%;
-			padding-left: 15px;
-
+			padding-bottom: 1%;
+			border-bottom: 1px solid #db664e;
+			display: inline-block;
 	}
 	h2 {
-		@extend %extend_3;
+		font-weight: 300;
+		line-height: 1.2;
+		color: $color_dark_grey;
 		font-size: 1.8em;
 	}
 	p {
 		font-size: 1.4em;
 		line-height: 1.4;
 		color: $color_grey;
-
 	}
+}
+
+.heading {
+	margin-bottom: 40px;
+	margin: 0 auto;
 }
 
 .grid-container {
-	position: relative;
-	max-width: 1080px;
-	margin: 0 auto;
-	@extend %extend_1;
-
-
-
-		.column {
-			display: inline-block;
-			position: relative;
-			overflow: hidden;
-			margin: 1%;
+		padding-bottom: 10%;
+		section {
+			display: block;
+			padding: 5% 10%;
 			border-radius: 5px;
 			background: rgba(255,255,255, 0.9);
 			box-shadow: 0 1px 0 0 $black_10;
-				&.two-thirds{
-				float: left;
-				width: 54%;
-				@media screen and (max-width: $break-mid){
-					width: 63%;
-				}
-				@media screen and (max-width: $break-small){
-						width: 100%;
-							float: none;
-				}
-			}
-			&.third{
-				width: 42%;
-				height: 374px;
-				float: right;
-				@media screen and (max-width: $break-large){
-						// width: 34.5%;
+		}
 
-				}
-				@media screen and (max-width: $break-mid){
-						height: 369px;
-						width: 33%;
-				}
-				@media screen and (max-width: $break-small){
-						height: 293px;
-						width: 100%;
-						float: none;
-				}
+		.winrate, .history {
+			text-align: center;
+			height: 340px;
+			margin: 0 auto;
+			h2{
+				text-align: left;
 			}
-			&.full{
-				display: block;
-				clear: both;
-				@media screen and (max-width: $break-small){
-					width: 100%;
-				}
+			.circle {
+				display: inline-block;
+				margin-top: 10%;
 			}
-		.heading {
-			margin-bottom: 40px;
 		}
-		section {
-			display: block;
+		.chart {
+			padding-bottom: 10%;
 		}
-	}
 }
+
 
 
 
 @import "_history.scss";
 @import "_graph.scss";
-@import "_avg_percentage.scss";
