@@ -24,16 +24,18 @@ body {
   margin-bottom: 40px;
   margin: 0 auto; }
 
-.grid {
-  width: 95%; }
-  .grid section {
-    display: block;
-    padding: 5% 10%;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
-  .grid .winrate {
-    margin: 0 auto; }
+.grid section {
+  display: block;
+  padding: 5% 10%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
+.grid .winrate, .grid .history {
+  height: 340px;
+  margin: 0 auto; }
+  .grid .winrate .circle, .grid .history .circle {
+    position: absolute;
+    margin: 3% 0 0 5%; }
 
 #games, #games-extra, #games-time {
   display: inline-block; }
@@ -173,14 +175,5 @@ body {
   margin: -120px 30px 0 0; }
   .chart .loss-key:hover {
     background-color: #bde1d2; }
-
-.circle {
-  margin: 0 auto; }
-  @media screen and (max-width: 960px) {
-    .circle {
-      margin: 30% 0 0 17%; } }
-  @media screen and (max-width: 793px) {
-    .circle {
-      margin: 7% 0 0 38%; } }
 
 /*# sourceMappingURL=main.css.map */

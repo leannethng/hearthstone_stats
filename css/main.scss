@@ -53,7 +53,7 @@ body {
 }
 
 .grid {
-	width: 95%;
+
 		section {
 			display: block;
 			padding: 5% 10%;
@@ -61,9 +61,13 @@ body {
 			background: rgba(255,255,255, 0.9);
 			box-shadow: 0 1px 0 0 $black_10;
 		}
-		.winrate {
-	
+		.winrate, .history {
+			height: 340px;
 			margin: 0 auto;
+			.circle {
+				position: absolute;
+				margin: 3% 0 0 5%;
+			}
 		}
 	}
 
