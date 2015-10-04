@@ -1,5 +1,5 @@
 //colors
-//#282D36
+
 $color_bg: #253033;
 $white: white;
 $black_10: rgba(0, 0, 0, .1);
@@ -18,19 +18,7 @@ $break-small: 793px;
 $break-xsmall: 533px;
 $break-mobile: 420px;
 
-//@extend-elements
-%extend_1 {
-	box-sizing: border-box;
-	padding-right: 15px;
-	padding-left: 15px;
-}
-%extend_3 {
-	font-size: 2.4em;
-	font-weight: 300;
-	line-height: 1.2;
-	// margin-bottom: 8px;
-	color: $color_dark_grey;
-}
+
 
 //Main layout
 body {
@@ -45,80 +33,40 @@ body {
 			color: #89C9AE;
 			padding-bottom: 4%;
 			padding-left: 15px;
-
 	}
 	h2 {
-		@extend %extend_3;
+		font-weight: 300;
+		line-height: 1.2;
+		color: $color_dark_grey;
 		font-size: 1.8em;
 	}
 	p {
 		font-size: 1.4em;
 		line-height: 1.4;
 		color: $color_grey;
-
 	}
 }
 
-.grid-container {
-	position: relative;
-	max-width: 1080px;
+.heading {
+	margin-bottom: 40px;
 	margin: 0 auto;
-	@extend %extend_1;
+}
 
-
-
-		.column {
-			display: inline-block;
-			position: relative;
-			overflow: hidden;
-			margin: 1%;
+.grid {
+	width: 95%;
+		section {
+			display: block;
+			padding: 5% 10%;
 			border-radius: 5px;
 			background: rgba(255,255,255, 0.9);
 			box-shadow: 0 1px 0 0 $black_10;
-				&.two-thirds{
-				float: left;
-				width: 54%;
-				@media screen and (max-width: $break-mid){
-					width: 63%;
-				}
-				@media screen and (max-width: $break-small){
-						width: 100%;
-							float: none;
-				}
-			}
-			&.third{
-				width: 42%;
-				height: 374px;
-				float: right;
-				@media screen and (max-width: $break-large){
-						// width: 34.5%;
-
-				}
-				@media screen and (max-width: $break-mid){
-						height: 369px;
-						width: 33%;
-				}
-				@media screen and (max-width: $break-small){
-						height: 293px;
-						width: 100%;
-						float: none;
-				}
-			}
-			&.full{
-				display: block;
-				clear: both;
-				@media screen and (max-width: $break-small){
-					width: 100%;
-				}
-			}
-		.heading {
-			margin-bottom: 40px;
 		}
-		section {
-			display: block;
+		.winrate {
+	
+			margin: 0 auto;
 		}
 	}
-}
+
 
 
 

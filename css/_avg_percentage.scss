@@ -1,8 +1,6 @@
-.winrate{
-  margin: 0 10px 30px;
-  padding: 10px 30px 30px;
+
   .circle{
-    margin: 15% 0 0 30%;
+    margin: 0 auto;
     @media screen and (max-width: $break-mid){
             margin: 30% 0 0 17%;
     }
@@ -10,5 +8,3 @@
             margin: 7% 0 0 38%;
     }
   }
-
-}
