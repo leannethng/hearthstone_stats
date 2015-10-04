@@ -5,8 +5,9 @@ $white: white;
 $black_10: rgba(0, 0, 0, .1);
 $color_dark_grey: #333;
 $color_grey: #8d9aa5;
-$color_win: #37AB7F;
-$color_loss: #89C9AE;
+$color_win: #5ab795;
+$color_loss: #db664e;
+// #89C9AE, 37AB7F
 
 //font
 $font:'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -27,12 +28,13 @@ body {
 	padding: 50px 0 0;
 	background: $color_bg;
 	h1 {
-		margin: 0;
+			margin: 0 0 3% 15px;
 			font-size: 3.5em;
 			font-weight: 100;
 			color: #89C9AE;
-			padding-bottom: 4%;
-			padding-left: 15px;
+			padding-bottom: 1%;
+			border-bottom: 1px solid #db664e;
+			display: inline-block;
 	}
 	h2 {
 		font-weight: 300;
@@ -52,8 +54,8 @@ body {
 	margin: 0 auto;
 }
 
-.grid {
-
+.grid-container {
+		padding-bottom: 10%;
 		section {
 			display: block;
 			padding: 5% 10%;
@@ -61,19 +63,26 @@ body {
 			background: rgba(255,255,255, 0.9);
 			box-shadow: 0 1px 0 0 $black_10;
 		}
+
 		.winrate, .history {
+			text-align: center;
 			height: 340px;
 			margin: 0 auto;
+			h2{
+				text-align: left;
+			}
 			.circle {
-				position: absolute;
-				margin: 3% 0 0 5%;
+				display: inline-block;
+				margin-top: 10%;
 			}
 		}
-	}
+		.chart {
+			padding-bottom: 10%;
+		}
+}
 
 
 
 
 @import "_history.scss";
 @import "_graph.scss";
-@import "_avg_percentage.scss";

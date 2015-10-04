@@ -65,7 +65,7 @@ $(document).ready(function() {
           maxValue:            100,
           width:               10,
           text:                function(value){return value + '%';},
-          colors:              ['#89C9AE', '#37AB7F'],
+          colors:              ['#db664e', '#5ab795'],
           duration:            400,
           wrpClass:            'circles-wrp',
           textClass:           'circles-text',

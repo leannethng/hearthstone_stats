@@ -4,12 +4,13 @@ body {
   padding: 50px 0 0;
   background: #253033; }
   body h1 {
-    margin: 0;
+    margin: 0 0 3% 15px;
     font-size: 3.5em;
     font-weight: 100;
     color: #89C9AE;
-    padding-bottom: 4%;
-    padding-left: 15px; }
+    padding-bottom: 1%;
+    border-bottom: 1px solid #db664e;
+    display: inline-block; }
   body h2 {
     font-weight: 300;
     line-height: 1.2;
@@ -24,21 +25,34 @@ body {
   margin-bottom: 40px;
   margin: 0 auto; }
 
-.grid section {
-  display: block;
-  padding: 5% 10%;
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
-.grid .winrate, .grid .history {
-  height: 340px;
-  margin: 0 auto; }
-  .grid .winrate .circle, .grid .history .circle {
-    position: absolute;
-    margin: 3% 0 0 5%; }
+.grid-container {
+  padding-bottom: 10%; }
+  .grid-container section {
+    display: block;
+    padding: 5% 10%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
+  .grid-container .winrate, .grid-container .history {
+    text-align: center;
+    height: 340px;
+    margin: 0 auto; }
+    .grid-container .winrate h2, .grid-container .history h2 {
+      text-align: left; }
+    .grid-container .winrate .circle, .grid-container .history .circle {
+      display: inline-block;
+      margin-top: 10%; }
+  .grid-container .chart {
+    padding-bottom: 10%; }
+
+.history {
+  text-align: center; }
+  .history h2 {
+    text-align: left; }
 
 #games, #games-extra, #games-time {
-  display: inline-block; }
+  display: inline-block;
+  text-align: left; }
 
 @media screen and (max-width: 533px) {
   #games-time {
@@ -48,21 +62,21 @@ body {
   #games-extra {
     display: none; } }
 
-.history ul {
+ul {
   list-style: none; }
-  .history ul li {
+  ul li {
     font-size: 1.6em;
     font-weight: 300;
     position: relative;
     margin: 15px 0 0;
     color: #8d9aa5; }
-    .history ul li:nth-last-of-type(1n+7) {
+    ul li:nth-last-of-type(1n+7) {
       display: none; }
-  .history ul.bulleted {
+  ul.bulleted {
     margin-bottom: 20px; }
-    .history ul.bulleted li.cols {
+    ul.bulleted li.cols {
       padding-left: 2px; }
-    .history ul.bulleted li:before {
+    ul.bulleted li:before {
       margin-left: -40px;
       font-size: .5em;
       position: absolute;
@@ -73,19 +87,19 @@ body {
       text-align: center;
       color: white;
       border-radius: 2px; }
-    .history ul.bulleted .won {
+    ul.bulleted .won {
       color: #333; }
-      .history ul.bulleted .won:before {
+      ul.bulleted .won:before {
         content: 'Won';
-        background-color: #37AB7F; }
-    .history ul.bulleted .lost {
+        background-color: #5ab795; }
+    ul.bulleted .lost {
       color: #8d9aa5; }
-      .history ul.bulleted .lost:before {
+      ul.bulleted .lost:before {
         content: 'Lost';
-        background-color: #89C9AE; }
+        background-color: #db664e; }
 
 .chart h2 {
-  padding-bottom: 6%; }
+  padding-bottom: 4%; }
 .chart #graph {
   display: flex;
   display: -webkit-box;
@@ -108,28 +122,31 @@ body {
   padding: 0;
   background: transparent;
   font-size: 11px; }
-  .chart #graph div {
-    width: 40px;
+  .chart #graph .columns {
+    width: 60px;
     position: relative;
     z-index: 2; }
+  .chart #graph .bar {
+    width: 40px;
+    margin: 0 10px; }
   .chart #graph .row {
-    position: absolute;
-    bottom: -50px;
+    position: relative;
+    bottom: -300px;
     color: #333;
-    padding-left: 2%; }
+    text-align: center; }
   .chart #graph .loss {
     position: absolute;
-    background-color: #89C9AE;
+    background-color: #db664e;
     border-color: transparent; }
     .chart #graph .loss:hover {
-      background-color: #bde1d2; }
+      background-color: #e89d8e; }
   .chart #graph .win {
     position: absolute;
-    background-color: #37AB7F;
+    background-color: #5ab795;
     border-color: transparent;
     bottom: 0; }
     .chart #graph .win:hover {
-      background-color: #62cda4; }
+      background-color: #8fceb7; }
   .chart #graph .bar p {
     padding: 0 0 0 3px;
     opacity: 0.7;
@@ -166,14 +183,14 @@ body {
     opacity: 0.7;
     color: #333; }
 .chart .win-key {
-  background-color: #37AB7F;
+  background-color: #5ab795;
   margin: -180px 30px 0 0; }
   .chart .win-key:hover {
-    background-color: #62cda4; }
+    background-color: #8fceb7; }
 .chart .loss-key {
-  background-color: #89C9AE;
+  background-color: #db664e;
   margin: -120px 30px 0 0; }
   .chart .loss-key:hover {
-    background-color: #bde1d2; }
+    background-color: #e89d8e; }
 
 /*# sourceMappingURL=main.css.map */

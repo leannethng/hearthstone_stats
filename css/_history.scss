@@ -1,71 +1,71 @@
+.history{
+	text-align: center;
+	h2{
+		text-align: left;
+	}
+}
+
 #games, #games-extra, #games-time{
 	display: inline-block;
-
+	text-align: left;
 }
 
 #games-time{
-
 	@media screen and (max-width: $break-xsmall){
 		display: none;
 	}
 }
-#games-extra{
 
+#games-extra{
 	@media screen and (max-width: $break-mobile){
 		display: none;
 	}
 }
 
 
-.history {
-
-	h2{
-	
+ul {
+	list-style: none;
+	li{
+		font-size: 1.6em;
+		font-weight: 300;
+		position: relative;
+		margin: 15px 0 0;
+		color: $color_grey;
+		&:nth-last-of-type(1n+7){
+			display: none;
+		}
 	}
-	ul {
-		list-style: none;
-		li{
-			font-size: 1.6em;
-			font-weight: 300;
-			position: relative;
-			margin: 15px 0 0;
-			color: $color_grey;
-			&:nth-last-of-type(1n+7){
-				display: none;
+	&.bulleted {
+		margin-bottom: 20px;
+		li {
+			&.cols{
+				padding-left: 2px;
+			}
+			&:before {
+				margin-left: -40px;
+				font-size: .5em;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 25px;
+				padding: 3px 2px 2px;
+				text-align: center;
+				color: $white;
+				border-radius: 2px;
 			}
 		}
-		&.bulleted {
-			margin-bottom: 20px;
-			li {
-				&.cols{
-					padding-left: 2px;
-				}
-				&:before {
-					margin-left: -40px;
-					font-size: .5em;
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 25px;
-					padding: 3px 2px 2px;
-					text-align: center;
-					color: $white;
-					border-radius: 2px;
-				}
+		.won {
+			color: $color_dark_grey;
+			&:before {
+				content: 'Won';
+				background-color: $color_win;
 			}
-			.won {
-				color: $color_dark_grey;
-				&:before {
-					content: 'Won';
-					background-color: $color_win;
-				}
-			}
-			.lost {
-				color: $color_grey;
-				&:before {
-					content: 'Lost';
-					background-color: $color_loss;
-				}
+		}
+		.lost {
+			color: $color_grey;
+			&:before {
+				content: 'Lost';
+				background-color: $color_loss;
 			}
 		}
 	}
