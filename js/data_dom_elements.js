@@ -93,7 +93,7 @@ $(document).ready(function() {
             wins = wins || 0;
         }
       statusHTML += '<div class="columns" >';
-      statusHTML += '<div class="loss bar" style="height:'+ losses +'%;">';
+      statusHTML += '<div class="loss bar" style="height:'+ losses.toFixed(0) +'%;">';
 
       if (losses === 0 && value.total === 0){
         statusHTML += "<p class='loss-percentage' style='display: none;'>-1%</p>";
@@ -103,7 +103,7 @@ $(document).ready(function() {
           statusHTML += "<p class='loss-percentage'>" + losses.toFixed(0) + '%'+'</p>';
       }
       statusHTML += "</div>";
-      statusHTML += '<div class="win bar" style="height:'+ wins +'%;">';
+      statusHTML += '<div class="win bar" style="height:'+ wins.toFixed(0) +'%;">';
 
       if (wins === 0 && value.total === 0){
         statusHTML += "<p class='win-percentage' style='display: none;'>-1%</p>";

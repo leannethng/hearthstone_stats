@@ -14,9 +14,9 @@ $font:'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
 
 //media queries
 $break-large:1090px;
-$break-mid: 960px;
-$break-small: 793px;
-$break-xsmall: 533px;
+$break-mid: 890px;
+$break-small: 767px;
+$break-xsmall: 535px;
 $break-mobile: 420px;
 
 
@@ -25,7 +25,6 @@ $break-mobile: 420px;
 body {
 	font-family: $font;
 	font-size: 62.5%;
-	padding: 50px 0 0;
 	background: $color_bg;
 	h1 {
 			margin: 0 0 3% 15px;
@@ -50,8 +49,11 @@ body {
 }
 
 .heading {
-	margin-bottom: 40px;
-	margin: 0 auto;
+	margin: 2% 0;
+	@media screen and (max-width: $break-xsmall){
+		text-align: center;
+
+	}
 }
 
 .grid-container {
@@ -62,8 +64,18 @@ body {
 			border-radius: 5px;
 			background: rgba(255,255,255, 0.9);
 			box-shadow: 0 1px 0 0 $black_10;
+			@media screen and (max-width: $break-small){
+				padding: 3% 5% 15%;
+			}
 		}
-
+		.grid-pad:nth-child(2){
+				@media screen and (max-width: $break-small){
+					padding-top: 0px;
+				}
+				.col-1-1{
+					margin-top: 0px;
+				}
+		}
 		.winrate, .history {
 			text-align: center;
 			height: 340px;
@@ -77,7 +89,13 @@ body {
 			}
 		}
 		.chart {
-			padding-bottom: 10%;
+			padding: 3% 10% 10%;
+			@media screen and (max-width: $break-mid){
+			padding: 3% 6% 15%;
+			}
+			@media screen and (max-width: $break-small){
+				padding: 3% 5% 15%;
+			}
 		}
 }
 

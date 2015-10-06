@@ -1,7 +1,6 @@
 body {
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 62.5%;
-  padding: 50px 0 0;
   background: #253033; }
   body h1 {
     margin: 0 0 3% 15px;
@@ -22,8 +21,10 @@ body {
     color: #8d9aa5; }
 
 .heading {
-  margin-bottom: 40px;
-  margin: 0 auto; }
+  margin: 2% 0; }
+  @media screen and (max-width: 535px) {
+    .heading {
+      text-align: center; } }
 
 .grid-container {
   padding-bottom: 10%; }
@@ -33,6 +34,14 @@ body {
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.9);
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
+    @media screen and (max-width: 767px) {
+      .grid-container section {
+        padding: 3% 5% 15%; } }
+  @media screen and (max-width: 767px) {
+    .grid-container .grid-pad:nth-child(2) {
+      padding-top: 0px; } }
+  .grid-container .grid-pad:nth-child(2) .col-1-1 {
+    margin-top: 0px; }
   .grid-container .winrate, .grid-container .history {
     text-align: center;
     height: 340px;
@@ -43,7 +52,13 @@ body {
       display: inline-block;
       margin-top: 10%; }
   .grid-container .chart {
-    padding-bottom: 10%; }
+    padding: 3% 10% 10%; }
+    @media screen and (max-width: 890px) {
+      .grid-container .chart {
+        padding: 3% 6% 15%; } }
+    @media screen and (max-width: 767px) {
+      .grid-container .chart {
+        padding: 3% 5% 15%; } }
 
 .history {
   text-align: center; }
@@ -54,12 +69,14 @@ body {
   display: inline-block;
   text-align: left; }
 
-@media screen and (max-width: 533px) {
+@media screen and (max-width: 890px) {
   #games-time {
     display: none; } }
-
-@media screen and (max-width: 420px) {
-  #games-extra {
+@media screen and (max-width: 767px) {
+  #games-time {
+    display: inline-block; } }
+@media screen and (max-width: 535px) {
+  #games-time {
     display: none; } }
 
 ul {
@@ -123,17 +140,35 @@ ul {
   background: transparent;
   font-size: 11px; }
   .chart #graph .columns {
-    width: 60px;
+    width: 40px;
     position: relative;
     z-index: 2; }
+    @media screen and (max-width: 535px) {
+      .chart #graph .columns {
+        width: 33px; } }
   .chart #graph .bar {
-    width: 40px;
-    margin: 0 10px; }
+    width: 40px; }
+    @media screen and (max-width: 700px) {
+      .chart #graph .bar {
+        width: 30px; } }
+    @media screen and (max-width: 535px) {
+      .chart #graph .bar {
+        width: 25px; } }
   .chart #graph .row {
     position: relative;
-    bottom: -300px;
+    bottom: -310px;
     color: #333;
-    text-align: center; }
+    text-align: center;
+    -webkit-transform: rotate(317deg);
+    -moz-transform: rotate(317deg);
+    -o-transform: rotate(317deg);
+    writing-mode: lr-tb; }
+    @media screen and (max-width: 767px) {
+      .chart #graph .row {
+        right: 30%; } }
+    @media screen and (max-width: 535px) {
+      .chart #graph .row {
+        right: 100%; } }
   .chart #graph .loss {
     position: absolute;
     background-color: #db664e;
@@ -172,12 +207,18 @@ ul {
       left: -5em;
       top: -0.8em;
       margin: 0 0 0 0.5em; }
+      @media screen and (max-width: 535px) {
+        .chart #ticks .tick p {
+          font-size: .75rem; } }
 .chart .key {
   float: right;
   width: 50px;
   height: 30px;
   border: 0px;
   text-decoration: none; }
+  @media screen and (max-width: 650px) {
+    .chart .key {
+      float: none; } }
   .chart .key p {
     padding: 10px 0 0 0;
     opacity: 0.7;
@@ -187,10 +228,16 @@ ul {
   margin: -180px 30px 0 0; }
   .chart .win-key:hover {
     background-color: #8fceb7; }
+  @media screen and (max-width: 650px) {
+    .chart .win-key {
+      margin: 90px 10px 0 35%; } }
 .chart .loss-key {
   background-color: #db664e;
   margin: -120px 30px 0 0; }
   .chart .loss-key:hover {
     background-color: #e89d8e; }
+@media screen and (max-width: 890px) {
+  .chart .win-key, .chart .loss-key {
+    margin-right: 1%; } }
 
 /*# sourceMappingURL=main.css.map */

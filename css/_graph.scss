@@ -20,20 +20,38 @@
 		background: transparent;
 		font-size: 11px;
 		.columns {
-			width: 60px;
+			width: 40px;
 			position: relative;
 			z-index: 2;
-
+			@media screen and (max-width: $break-xsmall){
+				width: 33px;
+			}
 		}
 		.bar{
 			width: 40px;
-			margin: 0 10px;
+			@media screen and (max-width: 700px){
+				width: 30px;
+			}
+			@media screen and (max-width: $break-xsmall){
+				width: 25px;
+			}
 		}
 		.row {
 			position: relative;
-			bottom: -300px;
+			bottom: -310px;
 			color: $color_dark_grey;
 			text-align: center;
+			-webkit-transform: rotate(317deg);
+			-moz-transform: rotate(317deg);
+			-o-transform: rotate(317deg);
+			writing-mode: lr-tb;
+			@media screen and (max-width: $break-small){
+				right: 30%;
+			}
+			@media screen and (max-width: $break-xsmall){
+				right: 100%;
+			}
+
 		}
 		.loss {
 			position: absolute;
@@ -80,6 +98,9 @@
 				left: -5em;
 				top: -0.8em;
 				margin: 0 0 0 0.5em;
+					@media screen and (max-width: $break-xsmall){
+						font-size: .75rem;
+					}
 			}
 		}
 	}
@@ -92,6 +113,9 @@
 		height: 30px;
 		border: 0px;
 		text-decoration: none;
+		@media screen and (max-width: 650px){
+			float: none;
+		}
 		p {
 			padding: 10px 0 0 0;
 			opacity: 0.7;
@@ -105,6 +129,9 @@
 		&:hover {
 			background-color: lighten($color_win, 15%);
 		}
+		@media screen and (max-width: 650px){
+		margin: 90px 10px 0 35% ;
+		}
 	}
 
 
@@ -114,6 +141,13 @@
 		&:hover {
 			background-color: lighten($color_loss, 15%);
 		}
+	}
+
+	.win-key, .loss-key {
+			@media screen and (max-width: $break-mid){
+				margin-right: 1%;
+			}
+
 	}
 
 

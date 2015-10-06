@@ -11,16 +11,17 @@
 }
 
 #games-time{
-	@media screen and (max-width: $break-xsmall){
+	@media screen and (max-width: $break-mid){
 		display: none;
 	}
+		@media screen and (max-width: $break-small){
+			display: inline-block;
+		}
+		@media screen and (max-width: $break-xsmall){
+			display: none;
+		}
 }
 
-#games-extra{
-	@media screen and (max-width: $break-mobile){
-		display: none;
-	}
-}
 
 
 ul {
