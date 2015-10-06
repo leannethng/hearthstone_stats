@@ -30,7 +30,7 @@
 				width: 33px;
 			}
 			@media screen and (max-width: $break-mobile){
-				width: 30px;
+				width: 27px;
 			}
 		}
 		.bar{
@@ -40,6 +40,9 @@
 			}
 			@media screen and (max-width: $break-xsmall){
 				width: 25px;
+			}
+			@media screen and (max-width: $break-mobile){
+				width: 20px;
 			}
 		}
 		.row {
