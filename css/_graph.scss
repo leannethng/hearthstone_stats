@@ -19,12 +19,18 @@
 		padding: 0;
 		background: transparent;
 		font-size: 11px;
+		@media screen and (max-width: $break-mobile){
+			width: 75%;
+		}
 		.columns {
 			width: 40px;
 			position: relative;
 			z-index: 2;
 			@media screen and (max-width: $break-xsmall){
 				width: 33px;
+			}
+			@media screen and (max-width: $break-mobile){
+				width: 30px;
 			}
 		}
 		.bar{

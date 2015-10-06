@@ -140,6 +140,9 @@ ul {
   padding: 0;
   background: transparent;
   font-size: 11px; }
+  @media screen and (max-width: 450px) {
+    .chart #graph {
+      width: 75%; } }
   .chart #graph .columns {
     width: 40px;
     position: relative;
@@ -147,6 +150,9 @@ ul {
     @media screen and (max-width: 535px) {
       .chart #graph .columns {
         width: 33px; } }
+    @media screen and (max-width: 450px) {
+      .chart #graph .columns {
+        width: 30px; } }
   .chart #graph .bar {
     width: 40px; }
     @media screen and (max-width: 700px) {
