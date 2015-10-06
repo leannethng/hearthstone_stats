@@ -24,7 +24,8 @@ body {
   margin: 2% 0; }
   @media screen and (max-width: 535px) {
     .heading {
-      text-align: center; } }
+      text-align: center;
+      margin: 2% 20px 0 0; } }
 
 .grid-container {
   padding-bottom: 10%; }
