@@ -2,23 +2,26 @@ body {
   font-family: "Lato", Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 62.5%;
   background: #253033; }
-  body h1 {
-    margin: 0 0 3% 15px;
-    font-size: 3.5em;
-    font-weight: 100;
-    color: #89C9AE;
-    padding-bottom: 1%;
-    border-bottom: 1px solid #db664e;
-    display: inline-block; }
-  body h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    color: #333;
-    font-size: 1.8em; }
-  body p {
-    font-size: 1.4em;
-    line-height: 1.4;
-    color: #8d9aa5; }
+
+h1 {
+  margin: 0 0 3% 15px;
+  font-size: 3.5em;
+  font-weight: 100;
+  color: #89C9AE;
+  padding-bottom: 1%;
+  border-bottom: 1px solid #db664e;
+  display: inline-block; }
+
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+  color: #333;
+  font-size: 1.8em; }
+
+p {
+  font-size: 1.4em;
+  line-height: 1.4;
+  color: #8d9aa5; }
 
 .heading {
   margin: 2% 0; }
@@ -29,46 +32,50 @@ body {
 
 .grid-container {
   padding-bottom: 10%; }
-  .grid-container section {
-    display: block;
-    padding: 5% 10%;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
-    @media screen and (max-width: 767px) {
-      .grid-container section {
-        padding: 3% 5% 15%; } }
+
+section {
+  display: block;
+  padding: 5% 10%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
   @media screen and (max-width: 767px) {
-    .grid-container .grid-pad:nth-child(2) {
-      padding-top: 0px; } }
-  .grid-container .grid-pad:nth-child(2) .col-1-1 {
-    margin-top: 0px; }
-  .grid-container .winrate, .grid-container .history {
-    text-align: center;
-    height: 340px;
-    margin: 0 auto; }
-    .grid-container .winrate h2, .grid-container .history h2 {
-      text-align: left; }
-    .grid-container .winrate .circle, .grid-container .history .circle {
-      display: inline-block;
-      margin-top: 10%; }
-  .grid-container .chart {
-    padding: 3% 10% 10%; }
-    @media screen and (max-width: 890px) {
-      .grid-container .chart {
-        padding: 3% 6% 15%; } }
-    @media screen and (max-width: 767px) {
-      .grid-container .chart {
-        padding: 3% 5% 15%; } }
+    section {
+      padding: 3% 5% 15%; } }
+
+@media screen and (max-width: 767px) {
+  .grid-pad:nth-child(2) {
+    padding-top: 0px; } }
+.grid-pad:nth-child(2) .col-1-1 {
+  margin-top: 0px; }
+
+.winrate, .history {
+  text-align: center;
+  height: 340px;
+  margin: 0 auto; }
+  .winrate h2, .history h2 {
+    text-align: left; }
+
+.circle {
+  display: inline-block;
+  margin-top: 10%; }
+
+.chart {
+  padding: 3% 10% 10%; }
+  @media screen and (max-width: 890px) {
+    .chart {
+      padding: 3% 6% 15%; } }
+  @media screen and (max-width: 767px) {
+    .chart {
+      padding: 3% 5% 15%; } }
 
 .history {
   text-align: center; }
   .history h2 {
     text-align: left; }
-
-#games, #games-extra, #games-time {
-  display: inline-block;
-  text-align: left; }
+  .history > div {
+    display: inline-block;
+    text-align: left; }
 
 @media screen and (max-width: 890px) {
   #games-time {
@@ -82,6 +89,8 @@ body {
 
 ul {
   list-style: none; }
+  ul.bulleted {
+    margin-bottom: 20px; }
   ul li {
     font-size: 1.6em;
     font-weight: 300;
@@ -90,11 +99,9 @@ ul {
     color: #8d9aa5; }
     ul li:nth-last-of-type(1n+7) {
       display: none; }
-  ul.bulleted {
-    margin-bottom: 20px; }
-    ul.bulleted li.cols {
+    ul li.cols {
       padding-left: 2px; }
-    ul.bulleted li:before {
+    ul li:before {
       margin-left: -40px;
       font-size: .5em;
       position: absolute;
@@ -105,20 +112,23 @@ ul {
       text-align: center;
       color: white;
       border-radius: 2px; }
-    ul.bulleted .won {
-      color: #333; }
-      ul.bulleted .won:before {
-        content: 'Won';
-        background-color: #5ab795; }
-    ul.bulleted .lost {
-      color: #8d9aa5; }
-      ul.bulleted .lost:before {
-        content: 'Lost';
-        background-color: #db664e; }
+
+.won {
+  color: #333; }
+  .won:before {
+    content: 'Won';
+    background-color: #5ab795; }
+
+.lost {
+  color: #8d9aa5; }
+  .lost:before {
+    content: 'Lost';
+    background-color: #db664e; }
 
 .chart h2 {
   padding-bottom: 4%; }
-.chart #graph {
+
+#graph {
   display: flex;
   display: -webkit-box;
   /* OLD - iOS 6-, Safari 3.1-6 */
@@ -141,63 +151,68 @@ ul {
   background: transparent;
   font-size: 11px; }
   @media screen and (max-width: 450px) {
-    .chart #graph {
+    #graph {
       width: 75%; } }
-  .chart #graph .columns {
+  #graph .columns {
     width: 40px;
     position: relative;
     z-index: 2; }
     @media screen and (max-width: 535px) {
-      .chart #graph .columns {
+      #graph .columns {
         width: 33px; } }
     @media screen and (max-width: 450px) {
-      .chart #graph .columns {
+      #graph .columns {
         width: 27px; } }
-  .chart #graph .bar {
-    width: 40px; }
-    @media screen and (max-width: 700px) {
-      .chart #graph .bar {
-        width: 30px; } }
-    @media screen and (max-width: 535px) {
-      .chart #graph .bar {
-        width: 25px; } }
-    @media screen and (max-width: 450px) {
-      .chart #graph .bar {
-        width: 20px; } }
-  .chart #graph .row {
-    position: relative;
-    bottom: -310px;
-    color: #333;
-    text-align: center;
-    -webkit-transform: rotate(317deg);
-    -moz-transform: rotate(317deg);
-    -o-transform: rotate(317deg);
-    writing-mode: lr-tb; }
-    @media screen and (max-width: 767px) {
-      .chart #graph .row {
-        right: 30%; } }
-    @media screen and (max-width: 535px) {
-      .chart #graph .row {
-        right: 100%; } }
-  .chart #graph .loss {
-    position: absolute;
-    background-color: #db664e;
-    border-color: transparent; }
-    .chart #graph .loss:hover {
-      background-color: #e89d8e; }
-  .chart #graph .win {
-    position: absolute;
-    background-color: #5ab795;
-    border-color: transparent;
-    bottom: 0; }
-    .chart #graph .win:hover {
-      background-color: #8fceb7; }
-  .chart #graph .bar p {
+
+.bar {
+  width: 40px; }
+  @media screen and (max-width: 700px) {
+    .bar {
+      width: 30px; } }
+  @media screen and (max-width: 535px) {
+    .bar {
+      width: 25px; } }
+  @media screen and (max-width: 450px) {
+    .bar {
+      width: 20px; } }
+  .bar p {
     padding: 0 0 0 3px;
     opacity: 0.7;
     font-size: 0.85em;
     color: #333; }
-.chart #ticks {
+
+.row {
+  position: relative;
+  bottom: -310px;
+  color: #333;
+  text-align: center;
+  -webkit-transform: rotate(317deg);
+  -moz-transform: rotate(317deg);
+  -o-transform: rotate(317deg);
+  writing-mode: lr-tb; }
+  @media screen and (max-width: 767px) {
+    .row {
+      right: 30%; } }
+  @media screen and (max-width: 535px) {
+    .row {
+      right: 100%; } }
+
+.loss {
+  position: absolute;
+  background-color: #db664e;
+  border-color: transparent; }
+  .loss:hover {
+    background-color: #e89d8e; }
+
+.win {
+  position: absolute;
+  background-color: #5ab795;
+  border-color: transparent;
+  bottom: 0; }
+  .win:hover {
+    background-color: #8fceb7; }
+
+#ticks {
   position: relative;
   top: -300px;
   left: 2px;
@@ -207,47 +222,52 @@ ul {
   margin: 0 auto -300px;
   font-size: 10px;
   font-family: fira-sans-2, Verdana, sans-serif; }
-  .chart #ticks .tick {
-    position: relative;
-    border-bottom: 1px dotted #8d9aa5; }
-    .chart #ticks .tick:first-child {
-      border-top: 1px dotted #8d9aa5; }
-    .chart #ticks .tick p {
-      position: absolute;
-      left: -5em;
-      top: -0.8em;
-      margin: 0 0 0 0.5em; }
-      @media screen and (max-width: 535px) {
-        .chart #ticks .tick p {
-          font-size: .75rem; } }
-.chart .key {
+
+.tick {
+  position: relative;
+  border-bottom: 1px dotted #8d9aa5; }
+  .tick:first-child {
+    border-top: 1px dotted #8d9aa5; }
+  .tick p {
+    position: absolute;
+    left: -5em;
+    top: -0.8em;
+    margin: 0 0 0 0.5em; }
+    @media screen and (max-width: 535px) {
+      .tick p {
+        font-size: .75rem; } }
+
+.key {
   float: right;
   width: 50px;
   height: 30px;
   border: 0px;
   text-decoration: none; }
   @media screen and (max-width: 650px) {
-    .chart .key {
+    .key {
       float: none; } }
-  .chart .key p {
+  .key p {
     padding: 10px 0 0 0;
     opacity: 0.7;
     color: #333; }
-.chart .win-key {
+
+.win-key {
   background-color: #5ab795;
   margin: -180px 30px 0 0; }
-  .chart .win-key:hover {
+  .win-key:hover {
     background-color: #8fceb7; }
   @media screen and (max-width: 650px) {
-    .chart .win-key {
+    .win-key {
       margin: 90px 10px 0 35%; } }
-.chart .loss-key {
+
+.loss-key {
   background-color: #db664e;
   margin: -120px 30px 0 0; }
-  .chart .loss-key:hover {
+  .loss-key:hover {
     background-color: #e89d8e; }
+
 @media screen and (max-width: 890px) {
-  .chart .win-key, .chart .loss-key {
+  .key {
     margin-right: 1%; } }
 
 /*# sourceMappingURL=main.css.map */
