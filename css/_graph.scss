@@ -1,8 +1,18 @@
+#wrapper{
+	width: 70%;
+	margin: 0 auto;
+	@media screen and (max-width: $break-xsmall){
+		width: 90%;
+	}
+}
+
 .chart {
 	h2{
 		padding-bottom: 4%;
 	}
 }
+
+
 
 #graph {
 	display: flex;
@@ -15,21 +25,23 @@
 	-moz-justify-content: space-between;
 	-ms-justify-content: space-between;
 	justify-content: space-between;
-	width: 70%;
+
 	height: 300px;
 	margin: 0 auto;
 	padding: 0;
 	background: transparent;
 	font-size: 11px;
-	@media screen and (max-width: $break-mobile){
-		width: 75%;
-	}
+
+
 	.columns {
 		width: 40px;
 		position: relative;
 		z-index: 2;
 		@media screen and (max-width: $break-xsmall){
 			width: 33px;
+		}
+		@media screen and (max-width: 500px){
+			width: 30px;
 		}
 		@media screen and (max-width: $break-mobile){
 			width: 27px;
@@ -38,16 +50,7 @@
 }
 
 .bar{
-	width: 40px;
-	@media screen and (max-width: 700px){
-		width: 30px;
-	}
-	@media screen and (max-width: $break-xsmall){
-		width: 25px;
-	}
-	@media screen and (max-width: $break-mobile){
-		width: 20px;
-	}
+	width: 90%;
 	p{
 		padding: 0 0 0 3px;
 		opacity: 0.7;
@@ -66,9 +69,6 @@
 	writing-mode: lr-tb;
 	@media screen and (max-width: $break-small){
 		right: 30%;
-	}
-	@media screen and (max-width: $break-xsmall){
-		right: 100%;
 	}
 }
 .loss {
@@ -100,6 +100,9 @@
 	margin: 0 auto -300px;
 	font-size: 10px;
 	font-family: fira-sans-2, Verdana, sans-serif;
+	@media screen and (max-width: $break-xsmall){
+		display: none;
+	}
 }
 
 .tick {
@@ -113,6 +116,11 @@
 		left: -5em;
 		top: -0.8em;
 		margin: 0 0 0 0.5em;
+			@media screen and (max-width: 650px){
+				left: -4em;
+				top: 0;
+				font-size: .75rem;
+			}
 			@media screen and (max-width: $break-xsmall){
 				font-size: .75rem;
 			}
@@ -120,7 +128,11 @@
 }
 
 
-
+#key{
+		@media screen and (max-width: 650px){
+	text-align: center;
+}
+}
 .key{
 	float: right;
 	width: 50px;
@@ -128,7 +140,7 @@
 	border: 0px;
 	text-decoration: none;
 	@media screen and (max-width: 650px){
-		float: none;
+		float:none;
 	}
 	p {
 		padding: 10px 0 0 0;
@@ -137,6 +149,13 @@
 	}
 }
 
+.desc-key{
+	display: inline-block;
+	margin: -230px 30px 0 0 ;
+	@media screen and (max-width: 650px){
+		margin: 0 auto;
+	}
+}
 .win-key {
 	background-color: $color_win;
 	margin: -180px 30px 0 0 ;
@@ -144,7 +163,8 @@
 		background-color: lighten($color_win, 15%);
 	}
 	@media screen and (max-width: 650px){
-	margin: 90px 10px 0 35% ;
+	margin: 90px 0 0;
+	position: relative;
 	}
 }
 
@@ -154,6 +174,9 @@
 	margin: -120px 30px 0 0 ;
 	&:hover {
 		background-color: lighten($color_loss, 15%);
+	}
+	@media screen and (max-width: 650px){
+		margin: 0;
 	}
 }
 

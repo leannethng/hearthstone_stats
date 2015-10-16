@@ -16,12 +16,12 @@
     <div class="grid-container">
       <div class="grid grid-pad">
         <div class="heading">
-          <h1>Hearthstone Games</h1>
+          <h1>Hearthstone Stats</h1>
         </div>
 <!-- History of games played -->
         <div class="col-7-12">
+          <h2>Recent Matches</h2>
           <section class="history">
-            <h2>Recent Games Played</h2>
             <div id="games"></div>
             <div id="games-extra"></div>
             <div id="games-time"></div>
@@ -29,8 +29,9 @@
         </div>
 <!-- winrate percentage circle -->
         <div class="col-5-12">
+          <h2>Overall Winrate Percentage </h2>
           <section class="winrate">
-            <h2>Winrate Percentage </h2>
+
             <div class="circle" id="circles-1"></div>
           </section>
         </div>
@@ -38,34 +39,41 @@
 <!-- Stacked chart -->
       <div class="grid grid-pad">
         <div class="col-1-1">
+          <h2>Win Rate Chart Percentage <br>Playing as:</br></h2>
           <section class="chart">
-            <h2>Win Rate Chart</h2>
+
+
+
 <!-- Wrapper needed to attach JS json data -->
-            <div id="wrapper">
-              <div id="graph"></div>
+              <div id="wrapper">
+                <div id="graph"></div>
+              </div>
+  <!-- Graph lines -->
+              <div id="ticks">
+                <div class="tick" style="height: 75px;">
+                  <p>100%</p>
+                </div>
+                <div class="tick" style="height: 75px;">
+                  <p>75%</p>
+                </div>
+                <div class="tick" style="height: 75px;">
+                  <p>50%</p>
+                </div>
+                <div class="tick" style="height: 75px;">
+                  <p>25%</p>
+                </div>
+              </div>
+  <!-- win loss buttons -->
+              <div id="key">
+                <p class=" key desc-key">Sort by:</p>
+                <button class=" key win-key">
+                    Win
+                </button>
+                <button class="key loss-key">
+                  Loss
+                </button>
             </div>
-<!-- Graph lines -->
-            <div id="ticks">
-              <div class="tick" style="height: 75px;">
-                <p>100%</p>
-              </div>
-              <div class="tick" style="height: 75px;">
-                <p>75%</p>
-              </div>
-              <div class="tick" style="height: 75px;">
-                <p>50%</p>
-              </div>
-              <div class="tick" style="height: 75px;">
-                <p>25%</p>
-              </div>
-            </div>
-<!-- win loss buttons -->
-            <button class=" key win-key">
-                Win
-            </button>
-            <button class="key loss-key">
-              Loss
-            </button>
+
           </section>
         </div>
       </div>

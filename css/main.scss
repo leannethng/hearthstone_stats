@@ -16,7 +16,7 @@ $font:'Lato', Helvetica Neue, Helvetica, Arial, sans-serif;
 // $break-large:1090px;
 $break-mid: 890px;
 $break-small: 767px;
-$break-xsmall: 535px;
+$break-xsmall: 560px;
 $break-mobile: 450px;
 
 
@@ -35,12 +35,20 @@ h1 {
 		padding-bottom: 1%;
 		border-bottom: 1px solid #db664e;
 		display: inline-block;
+		@media screen and (max-width: $break-xsmall){
+			font-weight: 300;
+		}
+		@media screen and (max-width: $break-mobile){
+			font-size: 3em;
+		}
 }
 h2 {
+	position: absolute;
 	font-weight: 300;
 	line-height: 1.2;
 	color: $color_dark_grey;
 	font-size: 1.8em;
+	padding: 2% 0 0 5%;
 }
 p {
 	font-size: 1.4em;
@@ -62,12 +70,12 @@ p {
 
 section {
 	display: block;
-	padding: 5% 10%;
+	padding: 70px 10%;
 	border-radius: 5px;
 	background: rgba(255,255,255, 0.9);
 	box-shadow: 0 1px 0 0 $black_10;
 	@media screen and (max-width: $break-small){
-		padding: 3% 5% 15%;
+		padding: 70px 5% 15%;
 	}
 }
 
@@ -92,12 +100,12 @@ section {
 	margin-top: 10%;
 }
 .chart {
-	padding: 3% 10% 10%;
+	padding: 140px 10% 10%;
 	@media screen and (max-width: $break-mid){
-	padding: 3% 6% 15%;
+	padding: 120px 6% 15%;
 	}
 	@media screen and (max-width: $break-small){
-		padding: 3% 5% 15%;
+		padding: 120px 5% 15%;
 	}
 }
 

@@ -11,12 +11,20 @@ h1 {
   padding-bottom: 1%;
   border-bottom: 1px solid #db664e;
   display: inline-block; }
+  @media screen and (max-width: 560px) {
+    h1 {
+      font-weight: 300; } }
+  @media screen and (max-width: 450px) {
+    h1 {
+      font-size: 3em; } }
 
 h2 {
+  position: absolute;
   font-weight: 300;
   line-height: 1.2;
   color: #333;
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  padding: 2% 0 0 5%; }
 
 p {
   font-size: 1.4em;
@@ -25,7 +33,7 @@ p {
 
 .heading {
   margin: 2% 0; }
-  @media screen and (max-width: 535px) {
+  @media screen and (max-width: 560px) {
     .heading {
       text-align: center;
       margin: 2% 20px 0 0; } }
@@ -35,13 +43,13 @@ p {
 
 section {
   display: block;
-  padding: 5% 10%;
+  padding: 70px 10%;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1); }
   @media screen and (max-width: 767px) {
     section {
-      padding: 3% 5% 15%; } }
+      padding: 70px 5% 15%; } }
 
 @media screen and (max-width: 767px) {
   .grid-pad:nth-child(2) {
@@ -61,13 +69,13 @@ section {
   margin-top: 10%; }
 
 .chart {
-  padding: 3% 10% 10%; }
+  padding: 140px 10% 10%; }
   @media screen and (max-width: 890px) {
     .chart {
-      padding: 3% 6% 15%; } }
+      padding: 120px 6% 15%; } }
   @media screen and (max-width: 767px) {
     .chart {
-      padding: 3% 5% 15%; } }
+      padding: 120px 5% 15%; } }
 
 .history {
   text-align: center; }
@@ -83,8 +91,12 @@ section {
 @media screen and (max-width: 767px) {
   #games-time {
     display: inline-block; } }
-@media screen and (max-width: 535px) {
+@media screen and (max-width: 560px) {
   #games-time {
+    display: none; } }
+
+@media screen and (max-width: 450px) {
+  #games-extra {
     display: none; } }
 
 ul {
@@ -125,6 +137,13 @@ ul {
     content: 'Lost';
     background-color: #db664e; }
 
+#wrapper {
+  width: 70%;
+  margin: 0 auto; }
+  @media screen and (max-width: 560px) {
+    #wrapper {
+      width: 90%; } }
+
 .chart h2 {
   padding-bottom: 4%; }
 
@@ -144,37 +163,27 @@ ul {
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
-  width: 70%;
   height: 300px;
   margin: 0 auto;
   padding: 0;
   background: transparent;
   font-size: 11px; }
-  @media screen and (max-width: 450px) {
-    #graph {
-      width: 75%; } }
   #graph .columns {
     width: 40px;
     position: relative;
     z-index: 2; }
-    @media screen and (max-width: 535px) {
+    @media screen and (max-width: 560px) {
       #graph .columns {
         width: 33px; } }
+    @media screen and (max-width: 500px) {
+      #graph .columns {
+        width: 30px; } }
     @media screen and (max-width: 450px) {
       #graph .columns {
         width: 27px; } }
 
 .bar {
-  width: 40px; }
-  @media screen and (max-width: 700px) {
-    .bar {
-      width: 30px; } }
-  @media screen and (max-width: 535px) {
-    .bar {
-      width: 25px; } }
-  @media screen and (max-width: 450px) {
-    .bar {
-      width: 20px; } }
+  width: 90%; }
   .bar p {
     padding: 0 0 0 3px;
     opacity: 0.7;
@@ -193,9 +202,6 @@ ul {
   @media screen and (max-width: 767px) {
     .row {
       right: 30%; } }
-  @media screen and (max-width: 535px) {
-    .row {
-      right: 100%; } }
 
 .loss {
   position: absolute;
@@ -222,6 +228,9 @@ ul {
   margin: 0 auto -300px;
   font-size: 10px;
   font-family: fira-sans-2, Verdana, sans-serif; }
+  @media screen and (max-width: 560px) {
+    #ticks {
+      display: none; } }
 
 .tick {
   position: relative;
@@ -233,9 +242,18 @@ ul {
     left: -5em;
     top: -0.8em;
     margin: 0 0 0 0.5em; }
-    @media screen and (max-width: 535px) {
+    @media screen and (max-width: 650px) {
+      .tick p {
+        left: -4em;
+        top: 0;
+        font-size: .75rem; } }
+    @media screen and (max-width: 560px) {
       .tick p {
         font-size: .75rem; } }
+
+@media screen and (max-width: 650px) {
+  #key {
+    text-align: center; } }
 
 .key {
   float: right;
@@ -251,6 +269,13 @@ ul {
     opacity: 0.7;
     color: #333; }
 
+.desc-key {
+  display: inline-block;
+  margin: -230px 30px 0 0; }
+  @media screen and (max-width: 650px) {
+    .desc-key {
+      margin: 0 auto; } }
+
 .win-key {
   background-color: #5ab795;
   margin: -180px 30px 0 0; }
@@ -258,13 +283,17 @@ ul {
     background-color: #8fceb7; }
   @media screen and (max-width: 650px) {
     .win-key {
-      margin: 90px 10px 0 35%; } }
+      margin: 90px 0 0;
+      position: relative; } }
 
 .loss-key {
   background-color: #db664e;
   margin: -120px 30px 0 0; }
   .loss-key:hover {
     background-color: #e89d8e; }
+  @media screen and (max-width: 650px) {
+    .loss-key {
+      margin: 0; } }
 
 @media screen and (max-width: 890px) {
   .key {

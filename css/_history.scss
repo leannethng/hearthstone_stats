@@ -23,6 +23,12 @@
 	}
 }
 
+#games-extra{
+	@media screen and (max-width: $break-mobile){
+		display: none;
+	}
+}
+
 
 
 ul {
