@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 //HISTORY
 
-  $.getJSON('http://www.leannethng.com/hearthstone_stats/data/classes.json', function(response) {
+  $.getJSON('https://www.leannethng.com/hearthstone_stats/data/classes.json', function(response) {
     //getting the wins and losses and hero and opponent
     var statusHTML = '<ul class="bulleted">';
     $.each(response.history, function(index, value) {
@@ -49,7 +49,7 @@ $(document).ready(function() {
 
 
 //WINRATE PERCENTAGE
-  $.getJSON('http://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
+  $.getJSON('https://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
     var winrate = (function(){
       var wins = response.stats.overall.wins;
       var total = response.stats.overall.total;
@@ -78,7 +78,7 @@ $(document).ready(function() {
 
 
 //WIN RATE CHART
-  $.getJSON('http://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
+  $.getJSON('https://www.leannethng.com/hearthstone_stats/data/winLoss.json', function(response) {
       var statusHTML = "<div id='graph'>";
     //using key value instead of index value
     //getting the percentage value and if 0 replace NaN with 0
