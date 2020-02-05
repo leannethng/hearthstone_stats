@@ -1,4 +1,4 @@
-#[Hearthstone Stats](https://leannethng.com/hearthstone_stats)
+# [Hearthstone Stats](https://leannethng.com/hearthstone_stats)
 
 Displaying my data from the game [Hearthstone](https://us.battle.net/hearthstone/en/).
 
