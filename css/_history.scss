@@ -1,62 +1,79 @@
-#games, #games-extra{
-	display: inline-block;
-	float: left;
+.history{
+	text-align: center;
+
+	h2{
+		text-align: left;
+	}
+	&> div{
+		display: inline-block;
+		text-align: left;
+	}
 }
 
-#games-times{
-	display: inline-block;
-	float: left;
-	clear: right;
+
+#games-time{
+	@media screen and (max-width: $break-mid){
+		display: none;
+	}
+	@media screen and (max-width: $break-small){
+		display: inline-block;
+	}
+	@media screen and (max-width: $break-xsmall){
+		display: none;
+	}
 }
 
-.history {
-	@extend %extend_1;
+#games-extra{
+	@media screen and (max-width: $break-mobile){
+		display: none;
+	}
+}
 
-	ul {
-		list-style: none;
-		li{
-			font-size: 1.6em;
-			position: relative;
-			margin: 15px 0 0;
-			color: $color_grey;
-			&:nth-last-of-type(1n+7){
-				display: none;
-			}
+
+
+ul {
+	list-style: none;
+	&.bulleted {
+		margin-bottom: 20px;
+	}
+	li{
+		font-size: 1.6em;
+		font-weight: 300;
+		position: relative;
+		margin: 15px 0 0;
+		color: $color_grey;
+		&:nth-last-of-type(1n+7){
+			display: none;
 		}
-		&.bulleted {
-			margin-bottom: 20px;
-			li {
-				padding-left: 40px;
-				&:before {
-					font-size: .5em;
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 25px;
-					padding: 3px 2px 2px;
-					text-align: center;
-					color: $white;
-					border-radius: 2px;
-				}
-			}
-			.won {
-				color: $color_dark_grey;
-				&:before {
-					content: 'Won';
-					background-color: $color_win;
-				}
-			}
-			.lost {
-				color: $color_grey;
-				&:before {
-					content: 'Lost';
-					background-color: $color_loss;
-				}
-			}
+		&.cols{
+			padding-left: 2px;
+		}
+		&:before {
+			margin-left: -40px;
+			font-size: .5em;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 25px;
+			padding: 3px 2px 2px;
+			text-align: center;
+			color: $white;
+			border-radius: 2px;
 		}
 	}
+}
 
-
-
-
+.won {
+	color: $color_dark_grey;
+	&:before {
+		content: 'Won';
+		background-color: $color_win;
+	}
+}
+.lost {
+	color: $color_grey;
+	&:before {
+		content: 'Lost';
+		background-color: $color_loss;
+	}
 }
